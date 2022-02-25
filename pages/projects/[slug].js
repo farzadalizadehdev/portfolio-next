@@ -5,7 +5,6 @@ import {
 } from "../../utils/getProjectsFromMarkdown";
 
 const ProjectDetailPage = (props) => {
-  console.log(props);
   return <ProjectDetail data={props.projectDetail} />;
 };
 
@@ -23,6 +22,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   const allProject = getProjectFiles();
   const slugs = allProject.map((fileName) => fileName.replace(/\.md$/, ""));
+  console.log(slugs);
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: false,

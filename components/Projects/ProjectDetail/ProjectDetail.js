@@ -29,13 +29,6 @@ const ProjectDetail = (props) => {
         />
       );
     },
-    p(content){
-      return (
-        <p className="custom-p">
-          {content}
-        </p>
-      )
-    }
   };
 
   return (
