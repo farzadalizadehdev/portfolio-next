@@ -9,6 +9,8 @@ import Works from "../components/Works/Works";
 import styles from "../styles/Home.module.css";
 import { getContentFromMarkdown } from "../utils/getContentFromMarkdown";
 import { getAllServices } from "../utils/getServicesFromMarkdown";
+import { getFeaturedProjects } from "../utils/getProjectsFromMarkdown";
+import { getAllTestimonials } from "../utils/getCommentsFromMarkdown";
 
 export default function Home(props) {
   const { tel, email, content } = props.contact;
@@ -26,12 +28,16 @@ export default function Home(props) {
       </Head>
       <main>
         <About content={props.about} />
-        {/* <Link href={`/projects`}>projects Page</Link> */}
+        <br />
         <Skills content={props.skills} />
-        <Services data={props.services}/>
-        <Works />
-        <Testimonials />
-        <Contact />
+        <br />
+        <Services data={props.services} />
+        <br />
+        <Works data={props.works} />
+        <br />
+        <Testimonials data={props.testimonials} />
+        <br />
+        <Contact content={props.contact} />
       </main>
     </div>
   );
@@ -39,15 +45,19 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const contactInfo = getContentFromMarkdown("contact");
-  const aboutText = getContentFromMarkdown("about");
+  const aboutContent = getContentFromMarkdown("about");
   const mySkills = getContentFromMarkdown("skills");
-  const allServices = getAllServices()
+  const allServices = getAllServices();
+  const featuredWorks = getFeaturedProjects();
+  const testimonials = getAllTestimonials();
   return {
     props: {
       contact: contactInfo,
-      about: aboutText,
+      about: aboutContent,
       skills: mySkills,
       services: allServices,
+      works: featuredWorks,
+      testimonials: testimonials,
     },
   };
 }

@@ -4,11 +4,14 @@ import { useState } from "react";
 import styles from "./contact.module.css";
 
 const Contact = (props) => {
+  const { email, tel, github } = props.content;
   return (
-    <section>
-      <h1>-- Contact Me</h1>
-      {/* <Link href="tel:+989127433785"><a>09127433785</a></Link>
-      <Link href="mailto:farzadalizadehdev@email.com"><a>farzadalizadehdev</a></Link> */}
+    <section className="contact-section">
+      <p>CONTACT ME</p>
+      <p>I’m always in learning...</p>
+      {email}
+      {tel}
+      {github}
     </section>
   );
 };

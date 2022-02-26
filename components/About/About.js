@@ -19,8 +19,8 @@ const About = (props) => {
     },
   };
   return (
-    <section>
-      <ReactMarkdown className="aboutText" components={renderers}>
+    <section className="about-section">
+      <ReactMarkdown className="about-content" components={renderers}>
         {content}
       </ReactMarkdown>
     </section>

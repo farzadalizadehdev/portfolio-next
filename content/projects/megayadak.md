@@ -5,7 +5,7 @@ title: "MegaYadak"
 data: "2020/10/15"
 image: "megayadak.png"
 excerpt: "this is an ecommerce project using html sass jquery"
-isFeatured: true
+isFeatured: false
 ---
 
 ## This is a content for [megayadak](https://megayadak.com)
