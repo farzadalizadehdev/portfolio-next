@@ -1,3 +1,6 @@
-- ![Javascript ](skills.svg)
-- React js
-- Next js
+SKILLS
+
+Im always in learning...
+
+
+![front end developer skills](skills.svg)

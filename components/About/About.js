@@ -2,7 +2,6 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 const About = (props) => {
-  console.log('props',props);
   const { content } = props.content;
   const renderers = {
     img(image) {
@@ -21,7 +20,9 @@ const About = (props) => {
   };
   return (
     <section>
-      <ReactMarkdown className="aboutText" components={renderers}>{content}</ReactMarkdown>
+      <ReactMarkdown className="aboutText" components={renderers}>
+        {content}
+      </ReactMarkdown>
     </section>
   );
 };
