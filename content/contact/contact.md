@@ -1,7 +1,9 @@
 ---
-tel: '+989127433785'
-email: 'farzadalizadehdev@gmail.com'
+firstName: "Farzad"
+lastName: "Alizadeh"
+tel: "+989127433785"
+email: "farzadalizadehdev@gmail.com"
+github: "https://github.com/farzadalizadehdev"
+cv: ""
 ---
-# Here's a Heading
 
-# this is content

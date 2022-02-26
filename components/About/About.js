@@ -1,6 +1,29 @@
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+
 const About = (props) => {
-    return <h1>-- About</h1>;
+  console.log('props',props);
+  const { content } = props.content;
+  const renderers = {
+    img(image) {
+      return (
+        <Image
+          src={`/images/${image.src}`}
+          alt={image.alt}
+          priority
+          height={25}
+          width={25}
+          layout="fixed"
+          className="custom-image"
+        />
+      );
+    },
   };
-  
-  export default About;
-  
+  return (
+    <section>
+      <ReactMarkdown className="aboutText" components={renderers}>{content}</ReactMarkdown>
+    </section>
+  );
+};
+
+export default About;
