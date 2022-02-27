@@ -20,9 +20,11 @@ const About = (props) => {
   };
   return (
     <section className="about-section">
-      <ReactMarkdown className="about-content" components={renderers}>
-        {content}
-      </ReactMarkdown>
+      <div className="container max-w-screen-xl px-4 mx-auto ">
+        <ReactMarkdown className="about-content" components={renderers}>
+          {content}
+        </ReactMarkdown>
+      </div>
     </section>
   );
 };

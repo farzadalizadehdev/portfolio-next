@@ -7,11 +7,13 @@ const Contact = (props) => {
   const { email, tel, github } = props.content;
   return (
     <section className="contact-section">
-      <p>CONTACT ME</p>
-      <p>I’m always in learning...</p>
-      {email}
-      {tel}
-      {github}
+      <div className="container max-w-screen-xl px-4 mx-auto">
+        <p>CONTACT ME</p>
+        <p>I’m always in learning...</p>
+        {email}
+        {tel}
+        {github}
+      </div>
     </section>
   );
 };

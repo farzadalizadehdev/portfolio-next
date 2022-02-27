@@ -10,8 +10,8 @@ const Skills = (props) => {
           src={`/images/skills/${image.src}`}
           alt={image.alt}
           priority
-          height={250}
-          width={250}
+          height={300}
+          width={200}
           layout="fixed"
           className="custom-image"
         />
@@ -20,11 +20,13 @@ const Skills = (props) => {
   };
   return (
     <section className="skills-section">
-      <p>SKILLS</p>
-      <p>I’m always in learning...</p>
-      <ReactMarkdown className="aboutText" components={renderers}>
-        {content}
-      </ReactMarkdown>
+      <div className="container max-w-screen-xl px-4 mx-auto">
+        <p>SKILLS</p>
+        <p>I’m always in learning...</p>
+        <ReactMarkdown className="aboutText" components={renderers}>
+          {content}
+        </ReactMarkdown>
+      </div>
     </section>
   );
 };
