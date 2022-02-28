@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import Animate from "./Animate/Animate";
 
 const About = (props) => {
   const { content } = props.content;
@@ -21,6 +22,9 @@ const About = (props) => {
   return (
     <section className="about-section">
       <div className="container max-w-screen-xl px-4 mx-auto ">
+        <div className="min-h-screen w-screen">
+          {/* <Animate /> */}
+        </div>
         <ReactMarkdown className="about-content" components={renderers}>
           {content}
         </ReactMarkdown>
