@@ -1,4 +1,4 @@
-const Footer = (props) => {
+const Footer = () => {
   return (
     <div className="container max-w-screen-xl px-4 mx-auto h-44">
       <h1>-- Footer</h1>

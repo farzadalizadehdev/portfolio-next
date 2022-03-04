@@ -5,7 +5,7 @@ title: "Iranecar"
 data: "2020/10/15"
 image: "iranecar.png"
 excerpt: "iranecar website for sell car"
-isFeatured: true
+isFeatured: false
 ---
 
 # This is a content for [iranecar](https://iranecar.com)

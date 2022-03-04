@@ -10,9 +10,9 @@ const Contact = (props) => {
       <div className="container max-w-screen-xl px-4 mx-auto">
         <p>CONTACT ME</p>
         <p>I’m always in learning...</p>
-        {email}
+        {/* {email}
         {tel}
-        {github}
+        {github} */}
       </div>
     </section>
   );

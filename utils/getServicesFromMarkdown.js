@@ -28,6 +28,8 @@ export function getAllServices() {
   const allServices = servicesFiles.map((servicesFile) => {
     return getServicesData(servicesFile);
   });
-  return allServices;
+  const sortedServices = allServices.sort((a, b) => (a.id < b.id ? -1 : 1));
+
+  return sortedServices;
 }
 

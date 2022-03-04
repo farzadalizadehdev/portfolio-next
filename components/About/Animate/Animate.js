@@ -35,7 +35,6 @@ const Animate = (props) => {
 
       .add("orbs", 1.2)
 
-
       .fromTo(
         ".orb1",
         { xPercent: -35, yPercent: -5 },
@@ -206,56 +205,63 @@ const Animate = (props) => {
   }, []);
 
   return (
-    <svg className="main1" width="100%" height="100%">
-      <defs>
-        <linearGradient id="grad1" x1="50%" y1="0%" x2="50%" y2="100%">
-          <stop
-            offset="10%"
-            style={{ stopColor: 'rgb(255, 255, 0)', stopOpacity: 0.9 }}
-          />
-          <stop
-            offset="99%"
-            style={{ stopColor: 'rgb(0, 255, 0)', stopOpacity: 0.1 }}
-          />
-        </linearGradient>
-        <linearGradient id="grad2" x1="50%" y1="0%" x2="50%" y2="100%">
-          <stop
-            offset="25%"
-            style={{ stopColor: 'rgb(0, 255, 200)', stopOpacity: 0.1 }}
-          />
-          <stop
-            offset="99%"
-            style={{ stopColor: 'rgb(200, 255, 0)', stopOpacity: 0.2 }}
-          />
-        </linearGradient>
-      </defs>
+    <div className="w-screen h-screen mx-auto">
+      <svg className="main1" width="100%" height="100%">
+        <defs>
+          <linearGradient id="grad1" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop
+              offset="10%"
+              style={{ stopColor: "rgb(255, 255, 0)", stopOpacity: 0.9 }}
+            />
+            <stop
+              offset="99%"
+              style={{ stopColor: "rgb(0, 255, 0)", stopOpacity: 0.1 }}
+            />
+          </linearGradient>
+          <linearGradient id="grad2" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop
+              offset="25%"
+              style={{ stopColor: "rgb(0, 255, 200)", stopOpacity: 0.1 }}
+            />
+            <stop
+              offset="99%"
+              style={{ stopColor: "rgb(200, 255, 0)", stopOpacity: 0.2 }}
+            />
+          </linearGradient>
+        </defs>
 
-      <rect className="m1Bg" fill="url(#grad2)" width="100%" height="100%" />
+        <rect className="m1Bg" fill="url(#grad2)" width="100%" height="100%" />
 
-      <g className="m1_stage" opacity="0">
-        <g className="m1_cGroup">
-          <circle className="m1OrbBlank" cx="0" cy="50" r="50" fill="#1290ff" />
+        <g className="m1_stage" opacity="0">
+          <g className="m1_cGroup">
+            <circle
+              className="m1OrbBlank"
+              cx="0"
+              cy="50"
+              r="50"
+              fill="#1290ff"
+            />
 
-          <circle
-            className="c1_line c1_line4"
-            cx="0"
-            cy="50"
-            r="550"
-            fill="none"
-            strokeWidth="2"
-            stroke="url(#grad1)"
-            opacity="0.4"
-          />
-          <g className="m1Orb orb4b">
-            <image xlinkHref="/images/logoVue.png" width="40" height="40" />
-          </g>
+            <circle
+              className="c1_line c1_line4"
+              cx="0"
+              cy="50"
+              r="550"
+              fill="none"
+              strokeWidth="2"
+              stroke="url(#grad1)"
+              opacity="0.4"
+            />
+            <g className="m1Orb orb4b">
+              <image xlinkHref="/images/logoVue.png" width="40" height="40" />
+            </g>
 
-          <g className="m1Orb orb4">
-            <circle cx="15" cy="10.5" r="20" fill="#006bca" />
-            <path
-              fill="#fff"
-              opacity="0.75"
-              d="M5.29,14.59l-0.01-0.89v-2.32c0.23-0.05,0.53-0.07,0.9-0.07c0.36,0,0.66,0.02,0.9,0.07v8.17
+            <g className="m1Orb orb4">
+              <circle cx="15" cy="10.5" r="20" fill="#006bca" />
+              <path
+                fill="#fff"
+                opacity="0.75"
+                d="M5.29,14.59l-0.01-0.89v-2.32c0.23-0.05,0.53-0.07,0.9-0.07c0.36,0,0.66,0.02,0.9,0.07v8.17
                                             c-0.24,0.05-0.54,0.07-0.9,0.07s-0.65-0.02-0.9-0.07v-2.57l0.01-0.89l-0.6,0.01H3.25l-0.6-0.01l0.01,0.89v2.57
                                             c-0.23,0.05-0.54,0.07-0.9,0.07c-0.37,0-0.66-0.02-0.89-0.07v-8.17c0.23-0.05,0.52-0.07,0.89-0.07c0.37,0,0.67,0.02,0.9,0.07v2.32
                                             l-0.01,0.89l0.6-0.01h1.44L5.29,14.59z M11.74,12.89l0.01,0.89v5.78c-0.24,0.05-0.54,0.07-0.9,0.07c-0.36,0-0.65-0.02-0.9-0.07
@@ -287,43 +293,49 @@ const Animate = (props) => {
                                             c0.24-0.04,0.51-0.06,0.82-0.06c0.31,0,0.58,0.02,0.8,0.06v1.14L25.7,4.42l0.82-0.01h1.06c0.05,0.27,0.08,0.53,0.08,0.77
                                             c0,0.25-0.03,0.49-0.08,0.75h-1.06L25.7,5.91l0.01,0.81v1.15c-0.23,0.04-0.5,0.06-0.81,0.06s-0.58-0.02-0.81-0.06V6.72l0.01-0.81
                                             l-0.82,0.01h-1.06c-0.05-0.24-0.08-0.49-0.08-0.76s0.03-0.52,0.08-0.76h1.06L24.1,4.42z"
-            />
+              />
+            </g>
           </g>
-        </g>
-        <g className="m1_cGroup">
-          <circle className="m1OrbBlank" cx="0" cy="50" r="25" fill="#983334" />
-
-          <circle
-            className="c1_line c1_line3"
-            cx="0"
-            cy="50"
-            r="450"
-            fill="none"
-            strokeWidth="2"
-            stroke="url(#grad1)"
-            opacity="0.4"
-          />
-
-          <g className="m1Orb orb3c">
-            <image xlinkHref="/images/logoReact.png" width="40" height="40" />
-          </g>
-
-          <g className="m1Orb orb3b">
-            <image xlinkHref="/images/logoReact.png" width="40" height="40" />
-          </g>
-          <g className="m1Orb orb3">
+          <g className="m1_cGroup">
             <circle
-              cx="20"
-              cy="8"
-              r="24"
-              stroke="#bc7c00"
-              strokeWidth="3"
-              fill="#cc971b"
+              className="m1OrbBlank"
+              cx="0"
+              cy="50"
+              r="25"
+              fill="#983334"
             />
-            <path
-              fill="#fff"
-              opacity="0.7"
-              d="M5.82,6.1c0-0.05,0-0.09,0-0.14c0-0.57-0.11-1.06-0.34-1.46c-0.23-0.4-0.62-0.6-1.19-0.6S3.32,4.18,3.05,4.73
+
+            <circle
+              className="c1_line c1_line3"
+              cx="0"
+              cy="50"
+              r="450"
+              fill="none"
+              strokeWidth="2"
+              stroke="url(#grad1)"
+              opacity="0.4"
+            />
+
+            <g className="m1Orb orb3c">
+              <image xlinkHref="/images/logoReact.png" width="40" height="40" />
+            </g>
+
+            <g className="m1Orb orb3b">
+              <image xlinkHref="/images/logoReact.png" width="40" height="40" />
+            </g>
+            <g className="m1Orb orb3">
+              <circle
+                cx="20"
+                cy="8"
+                r="24"
+                stroke="#bc7c00"
+                strokeWidth="3"
+                fill="#cc971b"
+              />
+              <path
+                fill="#fff"
+                opacity="0.7"
+                d="M5.82,6.1c0-0.05,0-0.09,0-0.14c0-0.57-0.11-1.06-0.34-1.46c-0.23-0.4-0.62-0.6-1.19-0.6S3.32,4.18,3.05,4.73
                                            c-0.27,0.55-0.4,1.34-0.4,2.37c0,1.03,0.16,1.81,0.49,2.31c0.33,0.51,0.8,0.76,1.43,0.76c0.62,0,1.36-0.32,2.22-0.97
                                            C7,9.35,7.19,9.55,7.38,9.81c0.19,0.26,0.31,0.5,0.35,0.73c-0.4,0.41-0.92,0.75-1.57,1.03c-0.65,0.28-1.28,0.42-1.89,0.42
                                            c-0.61,0-1.13-0.09-1.55-0.28c-0.42-0.19-0.77-0.43-1.03-0.74c-0.27-0.3-0.49-0.67-0.67-1.1C0.7,9.09,0.53,8.18,0.53,7.16
@@ -353,36 +365,42 @@ const Animate = (props) => {
                                            c0.38,0,0.8,0.05,1.26,0.16c0.46,0.11,0.84,0.24,1.15,0.4c0.01,0.25-0.04,0.51-0.15,0.81c-0.11,0.29-0.25,0.5-0.4,0.61
                                            c-0.73-0.34-1.34-0.51-1.83-0.51c-0.19,0-0.35,0.05-0.45,0.14s-0.16,0.21-0.16,0.35c0,0.23,0.19,0.41,0.56,0.56l0.81,0.3
                                            C38.41,8.05,39,8.78,39,9.78c0,0.67-0.24,1.21-0.73,1.61c-0.49,0.4-1.17,0.6-2.06,0.6C35.33,11.99,34.5,11.76,33.72,11.31z"
-            />
+              />
+            </g>
           </g>
-        </g>
-        <g className="m1_cGroup">
-          <circle className="m1OrbBlank" cx="0" cy="50" r="15" fill="#653997" />
-
-          <circle
-            className="c1_line c1_line2"
-            cx="0"
-            cy="50"
-            r="360"
-            fill="none"
-            strokeWidth="2"
-            stroke="url(#grad1)"
-            opacity="0.5"
-          />
-
-          <g className="m1Orb orb2">
+          <g className="m1_cGroup">
             <circle
-              cx="18.5"
-              cy="7"
-              r="24.5"
-              fill="#983334"
-              strokeWidth="2.5"
-              stroke="#b9393a"
+              className="m1OrbBlank"
+              cx="0"
+              cy="50"
+              r="15"
+              fill="#653997"
             />
-            <path
-              fill="#fff"
-              opacity="0.7"
-              d="M1.75,10.47L0.24,2.78c0.35-0.15,0.69-0.23,1.03-0.23c0.34,0,0.58,0.08,0.74,0.23s0.26,0.43,0.32,0.83l0.57,3.4
+
+            <circle
+              className="c1_line c1_line2"
+              cx="0"
+              cy="50"
+              r="360"
+              fill="none"
+              strokeWidth="2"
+              stroke="url(#grad1)"
+              opacity="0.5"
+            />
+
+            <g className="m1Orb orb2">
+              <circle
+                cx="18.5"
+                cy="7"
+                r="24.5"
+                fill="#983334"
+                strokeWidth="2.5"
+                stroke="#b9393a"
+              />
+              <path
+                fill="#fff"
+                opacity="0.7"
+                d="M1.75,10.47L0.24,2.78c0.35-0.15,0.69-0.23,1.03-0.23c0.34,0,0.58,0.08,0.74,0.23s0.26,0.43,0.32,0.83l0.57,3.4
                                            c0.19,1.07,0.29,1.77,0.32,2.1c0.03,0.33,0.05,0.51,0.06,0.53s0.04,0.03,0.1,0.03l1.09-6.85c0.35-0.06,0.77-0.09,1.25-0.09
                                            s0.89,0.03,1.24,0.09l1,6.67C7.97,9.59,7.98,9.64,8,9.65c0.02,0.02,0.05,0.03,0.1,0.03C8.18,8.9,8.31,8.01,8.48,6.99l0.76-4.32
                                            c0.24-0.05,0.52-0.08,0.85-0.08c0.33,0,0.64,0.04,0.94,0.13l0.09,0.13l-1.7,8.42c-0.52,0.06-1.01,0.09-1.47,0.09
@@ -403,44 +421,50 @@ const Animate = (props) => {
                                            c0-0.38,0.01-0.67,0.03-0.87h-0.7c-0.32,0-0.55-0.06-0.7-0.18c-0.14-0.12-0.22-0.33-0.22-0.62C27.82,6.94,27.87,6.67,27.96,6.44z
                                            M35.99,9.65h2.24c0,0.28-0.02,0.52-0.05,0.72c-0.1,0.63-0.52,0.95-1.27,0.95H34c-0.35,0-0.62-0.1-0.82-0.3
                                            c-0.2-0.2-0.3-0.48-0.3-0.83V2.67l0.09-0.08h0.71c0.76,0,1.14,0.4,1.14,1.21v5.89C35.24,9.66,35.63,9.65,35.99,9.65z"
-            />
+              />
+            </g>
           </g>
-        </g>
-        <g className="m1_cGroup">
-          <circle className="m1OrbBlank" cx="0" cy="50" r="20" fill="#653997" />
-          <circle
-            className="m1OrbBlank"
-            cx="0"
-            cy="50"
-            r="40"
-            fill="rgba(125,200,32,0.19)"
-          />
+          <g className="m1_cGroup">
+            <circle
+              className="m1OrbBlank"
+              cx="0"
+              cy="50"
+              r="20"
+              fill="#653997"
+            />
+            <circle
+              className="m1OrbBlank"
+              cx="0"
+              cy="50"
+              r="40"
+              fill="rgba(125,200,32,0.19)"
+            />
 
-          <circle
-            className="c1_solid"
-            cx="0"
-            cy="50"
-            r="280"
-            fill="url(#grad1)"
-            opacity="0.2"
-          />
-          <circle
-            className="c1_line c1_line1"
-            cx="0"
-            cy="50"
-            r="279"
-            fill="none"
-            strokeWidth="3"
-            stroke="url(#grad1)"
-            opacity="0.5"
-          />
-          <g className="m1Orb orb1">
-            <circle cx="12.5" cy="7" r="17" fill="#653997" />
-            <circle cx="12.5" cy="7" r="20" fill="none" stroke="#653997" />
-            <path
-              fill="#fff"
-              opacity="0.7"
-              d="M0.24,10.94c0.03-0.3,0.12-0.6,0.28-0.89s0.35-0.53,0.56-0.71c1.02,0.62,1.96,0.92,2.83,0.92
+            <circle
+              className="c1_solid"
+              cx="0"
+              cy="50"
+              r="280"
+              fill="url(#grad1)"
+              opacity="0.2"
+            />
+            <circle
+              className="c1_line c1_line1"
+              cx="0"
+              cy="50"
+              r="279"
+              fill="none"
+              strokeWidth="3"
+              stroke="url(#grad1)"
+              opacity="0.5"
+            />
+            <g className="m1Orb orb1">
+              <circle cx="12.5" cy="7" r="17" fill="#653997" />
+              <circle cx="12.5" cy="7" r="20" fill="none" stroke="#653997" />
+              <path
+                fill="#fff"
+                opacity="0.7"
+                d="M0.24,10.94c0.03-0.3,0.12-0.6,0.28-0.89s0.35-0.53,0.56-0.71c1.02,0.62,1.96,0.92,2.83,0.92
                                            c0.4,0,0.71-0.1,0.92-0.29c0.21-0.19,0.31-0.42,0.31-0.69c0-0.47-0.31-0.84-0.94-1.12l-1.65-0.7C1.22,6.89,0.56,6.04,0.56,4.91
                                            c0-0.85,0.32-1.54,0.97-2.09c0.64-0.54,1.49-0.81,2.54-0.81c1.05,0,2.09,0.27,3.12,0.8C7.14,3.45,6.89,3.99,6.45,4.42
                                            C5.5,3.96,4.66,3.73,3.93,3.73C3.55,3.73,3.26,3.82,3.05,4C2.85,4.19,2.74,4.39,2.74,4.63c0,0.37,0.29,0.69,0.87,0.94l1.68,0.7
@@ -453,42 +477,43 @@ const Animate = (props) => {
                                            c0.25-0.66,0.58-1.19,1-1.6c0.84-0.82,1.87-1.23,3.08-1.23s2.34,0.34,3.39,1.01c-0.03,0.29-0.14,0.58-0.33,0.88s-0.4,0.52-0.64,0.67
                                            c-0.77-0.51-1.54-0.77-2.31-0.77c-1.59,0-2.38,1.08-2.38,3.26c0,2.17,0.79,3.25,2.38,3.25c0.4,0,0.83-0.04,1.29-0.13V9.15
                                            c0-0.42,0.01-0.74,0.03-0.97h-0.77c-0.35,0-0.61-0.07-0.77-0.2s-0.24-0.37-0.24-0.69C20.86,6.96,20.91,6.67,21.01,6.4z"
+              />
+            </g>
+          </g>
+
+          <g className="m1_cGroup">
+            <circle
+              className="c1_solid"
+              cx="0"
+              cy="50"
+              r="220"
+              fill="url(#grad1)"
+              opacity="0.4"
+            />
+          </g>
+          <g className="m1_cGroup">
+            <circle
+              className="c1_solid"
+              cx="0"
+              cy="50"
+              r="150"
+              fill="url(#grad1)"
+              opacity="0.5"
+            />
+          </g>
+          <g className="m1_cGroup">
+            <circle
+              className="c1_solid"
+              cx="0"
+              cy="50"
+              r="80"
+              fill="#9e0"
+              opacity="0.6"
             />
           </g>
         </g>
-
-        <g className="m1_cGroup">
-          <circle
-            className="c1_solid"
-            cx="0"
-            cy="50"
-            r="220"
-            fill="url(#grad1)"
-            opacity="0.4"
-          />
-        </g>
-        <g className="m1_cGroup">
-          <circle
-            className="c1_solid"
-            cx="0"
-            cy="50"
-            r="150"
-            fill="url(#grad1)"
-            opacity="0.5"
-          />
-        </g>
-        <g className="m1_cGroup">
-          <circle
-            className="c1_solid"
-            cx="0"
-            cy="50"
-            r="80"
-            fill="#9e0"
-            opacity="0.6"
-          />
-        </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
   );
 };
 

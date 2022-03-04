@@ -2,6 +2,6 @@
 tel: "+989127433785"
 email: "farzadalizadehdev@gmail.com"
 github: "https://github.com/farzadalizadehdev"
-cv: ""
+downloadCV: "https://drive.google.com/uc?export=download&id=1W01tLY9u7re5v2J7q2WcuTFDpUcZ2Bid"
 ---
 

@@ -1,9 +1,9 @@
 import Navigation from "../../Navigation/Navigation";
 
-const Header = (props) => {
+const Header = () => {
   return (
-    <section className="sticky top-0 z-50 w-screen h-16 bg-slate-50/95">
-      <div className="container h-full max-w-screen-xl px-4 mx-auto">
+    <section className="sticky top-0 z-50 h-16 bg-white">
+      <div className="container w-full h-full max-w-screen-xl px-4 mx-auto">
         <Navigation />
       </div>
     </section>

@@ -1,6 +1,6 @@
 Hi,
 
-I’m Farzad Alizadeh
+I’m Farzad.
 
 I’m a front-end developer with 
 

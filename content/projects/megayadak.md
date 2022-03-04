@@ -5,7 +5,8 @@ title: "MegaYadak"
 data: "2020/10/15"
 image: "megayadak.png"
 excerpt: "this is an ecommerce project using html sass jquery"
-isFeatured: false
+tags: ["React","Redux","MDBootstrap"]
+isFeatured: true
 ---
 
 ## This is a content for [megayadak](https://megayadak.com)

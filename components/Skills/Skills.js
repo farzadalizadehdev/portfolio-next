@@ -10,22 +10,22 @@ const Skills = (props) => {
           src={`/images/skills/${image.src}`}
           alt={image.alt}
           priority
-          height={300}
-          width={200}
-          layout="fixed"
-          className="custom-image"
+          height={350}
+          width={1000}
         />
       );
     },
   };
   return (
-    <section className="skills-section">
-      <div className="container max-w-screen-xl px-4 mx-auto">
-        <p>SKILLS</p>
-        <p>I’m always in learning...</p>
-        <ReactMarkdown className="aboutText" components={renderers}>
-          {content}
-        </ReactMarkdown>
+    <section className="h-auto py-12 md:h-screen md:py-0 bg-slate-50">
+      <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto">
+        <p className={`text-4xl md:text-6xl font-bold text-sky-900`}>SKILLS</p>
+        <p
+          className={`text-sm md:text-xl font-light py-4 text-sky-900/30 md:mb-12 mb-0`}
+        >
+          I’m always in learning...
+        </p>
+        <ReactMarkdown components={renderers}>{content}</ReactMarkdown>
       </div>
     </section>
   );

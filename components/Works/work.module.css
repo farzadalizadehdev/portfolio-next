@@ -1,0 +1,23 @@
+.work {
+  width: 100%;
+  height: 400px;
+  margin: .5rem 0;
+
+}
+
+.detail {
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (min-width: 568px) {
+  .work {
+    width: calc(50% - 1.5rem);
+    margin: 0.75rem;
+  }
+}
+@media screen and (min-width: 896px) {
+    .work {
+      width: calc(33.333% - 1.5rem);
+      margin: 0.75rem;
+    }
+  }
