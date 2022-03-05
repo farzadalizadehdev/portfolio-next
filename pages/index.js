@@ -27,10 +27,10 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <About contactInfo={props.contact} content={props.about} />
+        {/* <About contactInfo={props.contact} content={props.about} />
         <Skills content={props.skills} />
         <Services data={props.services} />
-        <Works data={props.works} />
+        <Works data={props.works} /> */}
         <Testimonials data={props.testimonials} />
         <Contact content={props.contact} />
       </main>
