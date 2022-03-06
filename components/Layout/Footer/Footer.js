@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <div className="container max-w-screen-xl px-4 mx-auto h-44">
-      <h1>-- Footer</h1>
-    </div>
+    <footer className="w-screen h-16 bg-slate-900">
+      <div className="container flex items-center justify-center h-full max-w-screen-xl mx-auto text-center">
+        <p className="text-xs text-slate-500">Design By Me</p>
+      </div>
+    </footer>
   );
 };
 

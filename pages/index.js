@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import Services from "../components/Services/Services";
@@ -13,7 +12,6 @@ import { getFeaturedProjects } from "../utils/getProjectsFromMarkdown";
 import { getAllTestimonials } from "../utils/getCommentsFromMarkdown";
 
 export default function Home(props) {
-  const { tel, email, content } = props.contact;
   console.log(props);
   return (
     <div>
@@ -27,10 +25,10 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* <About contactInfo={props.contact} content={props.about} />
+        <About contactInfo={props.contact} content={props.about} />
         <Skills content={props.skills} />
         <Services data={props.services} />
-        <Works data={props.works} /> */}
+        <Works data={props.works} />
         <Testimonials data={props.testimonials} />
         <Contact content={props.contact} />
       </main>

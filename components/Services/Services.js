@@ -4,7 +4,7 @@ import Image from "next/image";
 const Services = (props) => {
   return (
     <section className="h-auto py-12 bg-slate-100 md:h-screen md:py-0">
-      <div className="container flex flex-col items-center justify-center h-full max-w-screen-md px-6 mx-auto">
+      <div className="container flex flex-col items-center justify-center h-full max-w-screen-lg px-6 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold text-sky-900`}>
           SERVICES
         </p>
