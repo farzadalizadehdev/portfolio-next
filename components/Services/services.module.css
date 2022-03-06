@@ -1,7 +1,7 @@
 .serviceItems {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -33,9 +33,7 @@
   background-color: #e7ffe6;
   color: rgb(22, 163, 74);
 }
-/* .link a{
-  color: red !important;
-} */
+
 @media screen and (min-width: 640px) {
   .serviceItems {
     flex-wrap: wrap;

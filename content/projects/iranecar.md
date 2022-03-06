@@ -4,6 +4,7 @@ slug: "iranecar"
 title: "Iranecar"
 data: "2020/10/15"
 image: "iranecar.png"
+slide: "iranecar.png"
 excerpt: "iranecar website for sell car"
 isFeatured: false
 ---

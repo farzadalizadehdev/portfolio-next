@@ -24,7 +24,7 @@ const Works = (props) => {
                     backgroundImage: `url(/images/projects/${work.slug}/${work.image})`,
                   }}
                   className={`cursor-pointer inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 border hover:border-sky-800 ${styles.work}`}
-                  key={work.id}
+                  key={work.slug}
                 >
                   <div className={`p-4 ${styles.detail}`}>
                     <h1 className=" text-slate-700">{work.title}</h1>

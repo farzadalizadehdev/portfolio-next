@@ -16,7 +16,7 @@ const Services = (props) => {
         <ul className={styles.serviceItems}>
           {props.data.map((service) => {
             return (
-              <li className="flex flex-col" key={service.id}>
+              <li className="flex flex-col px-8" key={service.title}>
                 <div
                   className={`flex items-center justify-between mt-2 ${styles.header}`}
                 >
@@ -27,7 +27,7 @@ const Services = (props) => {
                     src={`/images/services/${service.image}`}
                   />
                 </div>
-                <p className="my-4 text-sm font-light grow">{service.description}</p>
+                <p className="my-4 font-light text-md grow">{service.description}</p>
                 <Link href={`/projects/${service.slug}`}>See Projects</Link>
               </li>
             );

@@ -4,8 +4,9 @@ slug: "hpds"
 title: "React Admin Dashboard"
 data: "2020/10/15"
 image: "hpds.png"
+slide: "hpds.png"
 excerpt: "hpds website for sell car"
-tags: ["React","Redux","MDBootstrap"]
+tags: ["React", "Redux", "MDBootstrap"]
 isFeatured: true
 ---
 
@@ -22,4 +23,3 @@ isFeatured: true
 ```javascript
 var s = "JavaScript syntax highlighting";
 ```
-

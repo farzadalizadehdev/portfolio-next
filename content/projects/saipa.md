@@ -4,6 +4,7 @@ slug: "saipa"
 title: "Saipa"
 data: "2020/10/15"
 image: "saipa.png"
+slide: "saipa.png"
 excerpt: "saipa website for sell car"
 tags: ["React","Redux","MDBootstrap"]
 isFeatured: true
