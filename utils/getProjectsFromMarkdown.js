@@ -9,13 +9,11 @@ export function getProjectData(projectIdentifier) {
   const filePath = path.join(projectsDirectory, `${fileSlug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
-
   const projectData = {
     slug: fileSlug,
     ...data,
     content,
   };
-
   return projectData;
 }
 
