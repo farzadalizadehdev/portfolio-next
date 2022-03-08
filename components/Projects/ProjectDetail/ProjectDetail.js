@@ -21,7 +21,7 @@ import ProjectDetailItem from "./ProjectDetailItem/ProjectDetailItem";
 const ProjectDetail = (props) => {
   const { title, excerpt, slug, image, content, slide, detail } = props.data;
   const { employer, name, dates, technology, responsibilities, links } = detail;
-  const {website, design , github} = links
+  const { website, design, github } = links;
   const renderers = {
     img(image) {
       return (
@@ -68,8 +68,8 @@ const ProjectDetail = (props) => {
             {content}
           </ReactMarkdown>
         </div>
-        <div className="sticky w-full h-auto m-0 mb-8 lg:ml-8 lg:basis-96 top-24">
-          <div className="px-6 py-8 bg-white border rounded border-slate-200">
+        <div className="sticky flex flex-col w-full h-auto m-0 mb-8 sm:flex-row lg:flex-col lg:ml-8 lg:basis-96 top-24">
+          <div className="px-6 py-8 mb-4 bg-white border rounded border-slate-200">
             <p className="mb-4 text-3xl text-sky-900">Project Detail</p>
             <ul>
               <ProjectDetailItem
@@ -94,19 +94,37 @@ const ProjectDetail = (props) => {
               />
             </ul>
           </div>
-          <div className="flex flex-col md:flex-row lg:flex-col">
-          {website && <a href={website.url} target="_blank" className="flex items-center justify-center w-full h-12 m-0 mt-6 border rounded cursor-pointer md:mx-2 lg:mx-0 lg:mt-6 bg-sky-100 text-sky-800 hover:bg-sky-200 border-sky-200">
-            <GlobeAltIcon className="w-5 h-5 mr-2" />
-            {website.text}
-          </a>}
-          {design && <a href={design.url} target="_blank" className="flex items-center justify-center w-full h-12 m-0 mt-6 border rounded cursor-pointer md:mx-2 lg:mx-0 lg:mt-6 bg-fuchsia-100 text-fuchsia-800 hover:bg-fuchsia-200 border-fuchsia-200">
-            <TemplateIcon className="w-5 h-5 mr-2" />
-            {design.text}
-          </a>}
-          {github && <a href={github.url} target="_blank" className="flex items-center justify-center w-full h-12 m-0 mt-6 border rounded cursor-pointer md:mx-2 lg:mx-0 lg:mt-6 bg-slate-800 text-slate-100 hover:bg-slate-700 border-slate-700">
-            <CodeIcon className="w-5 h-5 mr-2" />
-            {github.text}
-          </a>}
+          <div className="flex flex-col w-full sm:ml-4 lg:m-0 sm:w-1/2 lg:w-full lg:flex-col">
+            {website && (
+              <a
+                href={website.url}
+                target="_blank"
+                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-sky-100 text-sky-800 hover:bg-sky-200 border-sky-200"
+              >
+                <GlobeAltIcon className="w-5 h-5 mr-2" />
+                {website.text}
+              </a>
+            )}
+            {design && (
+              <a
+                href={design.url}
+                target="_blank"
+                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-fuchsia-100 text-fuchsia-800 hover:bg-fuchsia-200 border-fuchsia-200"
+              >
+                <TemplateIcon className="w-5 h-5 mr-2" />
+                {design.text}
+              </a>
+            )}
+            {github && (
+              <a
+                href={github.url}
+                target="_blank"
+                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-slate-800 text-slate-100 hover:bg-slate-700 border-slate-700"
+              >
+                <CodeIcon className="w-5 h-5 mr-2" />
+                {github.text}
+              </a>
+            )}
           </div>
         </div>
       </section>

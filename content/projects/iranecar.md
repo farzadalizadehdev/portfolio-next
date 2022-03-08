@@ -20,7 +20,7 @@ detail:
         design: { text: "Design", url: "https://drive.google.com/drive/folders/1b4C9NJr1entFB_nf6AxxbHPGJ7gVPYVW?usp=sharing"}
     },
   }
-isFeatured: true
+isFeatured: false
 ---
 
 # This is a content for [iranecar](https://iranecar.com)
