@@ -48,7 +48,7 @@ const Navigation = () => {
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
             <a
               href="#"
-              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-sm border border-transparent rounded-full text-sky-800 bg-sky-50"
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-sm border border-transparent rounded-full text-sky-800 hover:text-sky-700 bg-sky-50"
             >
               <DownloadIcon className="inline-block w-4 h-4 mr-1 align-sub" />
               Download CV

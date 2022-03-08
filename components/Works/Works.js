@@ -18,13 +18,12 @@ const Works = (props) => {
         <ul className={`w-full flex flex-wrap mb-12 px-4  ${styles.wrapper}`}>
           {props.data.map((work) => {
             return (
-              <Link href={`/projects/${work.slug}`}>
+              <Link key={work.slug} href={`/projects/${work.slug}`}>
                 <li
                   style={{
                     backgroundImage: `url(/images/projects/${work.slug}/${work.image})`,
                   }}
                   className={`cursor-pointer inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 border hover:border-sky-800 ${styles.work}`}
-                  key={work.slug}
                 >
                   <div className={`p-4 ${styles.detail}`}>
                     <h1 className=" text-slate-700">{work.title}</h1>
@@ -37,7 +36,7 @@ const Works = (props) => {
             );
           })}
         </ul>
-        <div className="flex items-center text-sky-700">
+        <div className="flex items-center text-sky-700 hover:text-sky-600">
           <Link href={`/projects`}>See More Projects</Link>
           <ArrowRightIcon className="inline-block w-4 h-4 ml-2" />
         </div>

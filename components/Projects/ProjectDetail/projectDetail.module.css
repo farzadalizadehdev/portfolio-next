@@ -1,0 +1,13 @@
+.image {
+    margin: 4rem 0;
+}
+
+.detailIcon {
+    width: 1.2rem;
+    height: 1.2rem;
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+    margin-right: .5rem;
+    display: inline-block;
+    color: #94A3B8;
+}

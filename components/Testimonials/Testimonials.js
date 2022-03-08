@@ -76,7 +76,7 @@ const Testimonials = (props) => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <div className="flex items-center mt-12 text-sky-700">
+        <div className="flex items-center hidden mt-12 text-sky-700">
           <AnnotationIcon className="inline-block w-5 h-5 mr-2" />
           <Link href={`#`}>Write Your Comment</Link>
         </div>
