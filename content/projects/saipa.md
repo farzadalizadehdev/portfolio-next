@@ -5,8 +5,21 @@ title: "Saipa"
 data: "2020/10/15"
 image: "saipa.png"
 slide: "saipa.png"
-excerpt: "saipa website for sell car"
-tags: ["React","Redux","MDBootstrap"]
+excerpt: "this is an ecommerce project using html sass jquery"
+tags: ["React", "Redux", "MDBootstrap"]
+detail:
+  {
+    employer: { text: "Employer", value: "MEGA" },
+    name: { text: "Name", value: "Saipa" },
+    dates: { text: "Dates", value: "1398 - 2019" },
+    technology: { text: "Technology", value: "Javascript - Jquery - HTML5 - Css3/Sass" },
+    responsibilities: { text: "Responsibilities", value: "Frontend Developer - UI/UX Designer" },
+    links: {
+        website: { text: "Website", url: "https://megayadak.com/" },
+        github: { text: "Github", url: "https://saipa.iranecar.com/" },
+        design: { text: "Design", url: "https://drive.google.com/drive/folders/1b4C9NJr1entFB_nf6AxxbHPGJ7gVPYVW?usp=sharing"}
+    },
+  }
 isFeatured: true
 ---
 

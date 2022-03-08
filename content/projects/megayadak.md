@@ -16,7 +16,7 @@ detail:
     responsibilities: { text: "Responsibilities", value: "Frontend Developer - UI/UX Designer" },
     links: {
         website: { text: "Website", url: "https://megayadak.com/" },
-        # github: { text: "Github", url: "https://saipa.iranecar.com/" },
+        github: { text: "Github", url: "https://saipa.iranecar.com/" },
         design: { text: "Design", url: "https://drive.google.com/drive/folders/1b4C9NJr1entFB_nf6AxxbHPGJ7gVPYVW?usp=sharing"}
     },
   }
