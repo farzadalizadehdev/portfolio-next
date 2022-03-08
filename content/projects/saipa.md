@@ -3,8 +3,8 @@ id: "2"
 slug: "saipa"
 title: "Saipa"
 data: "2020/10/15"
-image: "saipa.png"
-slide: "saipa.png"
+image: "saipa.jpg"
+slide: "saipa2.jpg"
 excerpt: "this is an ecommerce project using html sass jquery"
 tags: ["React", "Redux", "MDBootstrap"]
 detail:

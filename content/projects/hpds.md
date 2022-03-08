@@ -3,8 +3,8 @@ id: "4"
 slug: "hpds"
 title: "hpds"
 data: "2020/10/15"
-image: "hpds.png"
-slide: "hpds.png"
+image: "hpds.jpg"
+slide: "hpds2.jpg"
 excerpt: "this is an ecommerce project using html sass jquery"
 tags: ["React", "Redux", "MDBootstrap"]
 detail:

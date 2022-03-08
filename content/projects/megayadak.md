@@ -3,8 +3,8 @@ id: "1"
 slug: "megayadak"
 title: "MegaYadak"
 data: "2020/10/15"
-image: "megayadak.png"
-slide: "megayadak.png"
+image: "megayadak.jpg"
+slide: "megayadak2.jpg"
 excerpt: "this is an ecommerce project using html sass jquery"
 tags: ["React", "Redux", "MDBootstrap"]
 detail:
