@@ -21,8 +21,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const allProject = getProjectFiles();
-  const slugs = allProject.map((fileName) => fileName.replace(/\.md$/, ""));
-  console.log(slugs);
+  const slugs = allProject.map((project) => project.replace(/\.md$/, ""));
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: false,

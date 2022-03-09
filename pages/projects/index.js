@@ -5,7 +5,7 @@ import { getAllProjects } from "../../utils/getProjectsFromMarkdown";
 const ProjectsPage = (props) => {
   return <section className="container max-w-screen-xl min-h-screen p-8 mx-auto">
     <ProjectFilter/>
-    <Projects data={props.projects} />
+    {/* <Projects data={props.projects} /> */}
   </section>
 };
 

@@ -35,3 +35,11 @@ export function getFeaturedProjects() {
   const featuredProjects = allProject.filter((project) => project.isFeatured);
   return featuredProjects;
 }
+
+export function getFilteredProjects(category) {
+  const allProject = getAllProjects();
+  const filteredProjects = allProject.filter(
+    (project) => project.category === category
+  );
+  return filteredProjects;
+}
