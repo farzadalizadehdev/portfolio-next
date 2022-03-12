@@ -20,15 +20,20 @@ const Services = (props) => {
                 <div
                   className={`flex items-center justify-between mt-2 ${styles.header}`}
                 >
-                  <p className="m-0">{service.title}</p>
+                  <p className="m-0 cursor-default">{service.title}</p>
                   <Image
                     width={35}
                     height={35}
                     src={`/images/services/${service.image}`}
+                    alt=""
                   />
                 </div>
-                <p className="my-4 font-light text-md grow">{service.description}</p>
-                <Link href={`/projects/${service.slug}`}>See Projects</Link>
+                <p className="my-4 font-light text-md grow cursor-default">
+                  {service.description}
+                </p>
+                <Link href={`/projects/search/${service.slug}`}>
+                  See Projects
+                </Link>
               </li>
             );
           })}

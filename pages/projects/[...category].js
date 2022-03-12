@@ -10,6 +10,9 @@ const FilteredProjectPage = (props) => {
   if (props.hasError) {
     return <Custom404/>;
   }
+  if(!props.projects) {
+    return <h1>LOADING...</h1>
+  }
   return (
     <section className="container max-w-screen-xl min-h-screen p-8 mx-auto">
       <ProjectFilter filters={props.filters} />

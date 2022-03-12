@@ -11,7 +11,7 @@ const ProjectFilter = (props) => {
     setActiveTab(tab ? tab[1] : "all");
   }, [tab]);
   return (
-    <ul className="flex w-full px-4 mt-4 mb-8 text-sm justify-center md:justify-start items-center sticky top-16 bg-white h-12">
+    <ul className="flex w-full px-4 mt-4 mb-8 text-sm justify-center md:justify-start items-center sticky top-16 bg-white z-20 h-12">
       <li
         className={`cursor-pointer mx-4 font-light text-sky-900 hover:text-sky-800 border-b-sky-700 ${
           activeTab === "all" ? "border-b-2" : ""

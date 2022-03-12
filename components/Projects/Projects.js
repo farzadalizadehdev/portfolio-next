@@ -3,7 +3,7 @@ import styles from "./projects.module.css";
 
 const Projects = (props) => {
   return (
-    <ul className="opacity-10">
+    <ul>
       {props.data.map((item) => {
         const { id, title, excerpt, slug, image, tags } = item;
         return (
@@ -18,8 +18,8 @@ const Projects = (props) => {
               <div
                 className={`cursor-pointer px-4 py-6 h-full w-full flex items-start flex-col justify-end ${styles.detail}`}
               >
-                <h1 className=" text-slate-700">{title}</h1>
-                <p className="text-xs font-light text-slate-600">{excerpt}</p>
+                <h1 className=" text-white">{title}</h1>
+                <p className="text-xs font-light text-slate-200">{excerpt}</p>
                 <ul className="flex items-center justify-start my-2">
                   {tags &&
                     tags.map((tag) => {
