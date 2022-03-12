@@ -5,7 +5,7 @@ import { getAllProjects } from "../../utils/getProjectsFromMarkdown";
 const ProjectsPage = (props) => {
   return (
     <section className="container max-w-screen-xl min-h-screen p-8 mx-auto">
-      <ProjectFilter/>
+      <ProjectFilter filters={props.filters} />
       <Projects data={props.projects} />
     </section>
   );
@@ -13,9 +13,14 @@ const ProjectsPage = (props) => {
 
 export async function getStaticProps() {
   const allProject = getAllProjects();
+  const filters = allProject.map((project) => {
+    return project.category;
+  });
+  const flatFilters = filters.flat()
   return {
     props: {
       projects: allProject,
+      filters: [...new Set(flatFilters)],
     },
   };
 }

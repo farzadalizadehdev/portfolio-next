@@ -5,7 +5,7 @@ title: "hpds"
 data: "2020/10/15"
 image: "hpds.jpg"
 slide: "hpds2.jpg"
-category: "development"
+category: ["development","uiux"]
 excerpt: "this is an ecommerce project using html sass jquery"
 tags: ["React", "Redux", "MDBootstrap"]
 detail:

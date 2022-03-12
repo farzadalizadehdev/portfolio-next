@@ -5,7 +5,7 @@ title: "MegaYadak"
 data: "2020/10/15"
 image: "megayadak.jpg"
 slide: "megayadak2.jpg"
-category: "development"
+category: ["development", "uiux", "graphic"]
 excerpt: "this is an ecommerce project using html sass jquery"
 tags: ["React", "Redux", "MDBootstrap"]
 detail:

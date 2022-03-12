@@ -9,11 +9,13 @@ import {
   DocumentIcon,
   GlobeAltIcon,
   OfficeBuildingIcon,
+  ArrowLeftIcon,
   TemplateIcon,
   TerminalIcon,
   UserIcon,
 } from "@heroicons/react/outline";
 import ProjectDetailItem from "./ProjectDetailItem/ProjectDetailItem";
+import Link from "next/link";
 
 const ProjectDetail = (props) => {
   const { title, excerpt, slug, image, content, slide, detail } = props.data;
@@ -64,6 +66,10 @@ const ProjectDetail = (props) => {
           >
             {content}
           </ReactMarkdown>
+          <div className="flex items-center text-sky-700 hover:text-sky-600 mb-8">
+            <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
+            <Link href={`/projects`}>Back To Projects</Link>
+          </div>
         </div>
         <div className="sticky flex flex-col w-full h-auto m-0 mb-8 sm:flex-row lg:flex-col lg:ml-8 lg:basis-96 top-24">
           <div className="px-6 py-8 mb-4 bg-white border rounded border-slate-200">

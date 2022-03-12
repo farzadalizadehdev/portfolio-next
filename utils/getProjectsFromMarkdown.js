@@ -38,8 +38,8 @@ export function getFeaturedProjects() {
 
 export function getFilteredProjects(category) {
   const allProject = getAllProjects();
-  const filteredProjects = allProject.filter(
-    (project) => project.category === category.toString()
+  const filteredProjects = allProject.filter((project) =>
+    project.category.includes(category)
   );
   return filteredProjects;
 }
