@@ -66,7 +66,7 @@ const ProjectDetail = (props) => {
           >
             {content}
           </ReactMarkdown>
-          <div className="flex hidden md:flex items-center text-sky-700 hover:text-sky-600 mb-8">
+          <div className="flex items-center hidden mb-8 md:flex text-sky-700 hover:text-sky-600">
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <Link href={`/projects`}>Back To Projects</Link>
           </div>
@@ -129,7 +129,7 @@ const ProjectDetail = (props) => {
               </a>
             )}
           </div>
-          <div className="flex items-center md:hidden justify-center text-sky-700 hover:text-sky-600 m-4">
+          <div className="flex items-center justify-center m-4 md:hidden text-sky-700 hover:text-sky-600">
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <Link href={`/projects`}>Back To Projects</Link>
           </div>

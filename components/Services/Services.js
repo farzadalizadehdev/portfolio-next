@@ -28,7 +28,7 @@ const Services = (props) => {
                     alt=""
                   />
                 </div>
-                <p className="my-4 font-light text-md grow cursor-default">
+                <p className="my-4 font-light cursor-default text-md grow">
                   {service.description}
                 </p>
                 <Link href={`/projects/search/${service.slug}`}>
