@@ -5,14 +5,12 @@ import Services from "../components/Services/Services";
 import Skills from "../components/Skills/Skills";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Works from "../components/Works/Works";
-import styles from "../styles/Home.module.css";
 import { getContentFromMarkdown } from "../utils/getContentFromMarkdown";
 import { getAllServices } from "../utils/getServicesFromMarkdown";
 import { getFeaturedProjects } from "../utils/getProjectsFromMarkdown";
 import { getAllTestimonials } from "../utils/getCommentsFromMarkdown";
 
 export default function Home(props) {
-  console.log(props);
   return (
     <div>
       <Head>

@@ -1,42 +1,34 @@
-// import {
-//   getFilteredProjects,
-//   getProjectFiles,
-//   getProjectData,
-//   getAllProjects,
-// } from "../../utils/getProjectsFromMarkdown";
+import { getFilteredProjects } from "../../utils/getProjectsFromMarkdown";
+import ProjectFilter from "../../components/Projects/ProjectFilter/ProjectFilter";
+import Projects from "../../components/Projects/Projects";
 
 const FilteredProjectPage = (props) => {
-  console.log(props);
-  return <h1>FilteredProjectPage</h1>;
+  if (props.hasError) {
+    return <h1>Error</h1>;
+  }
+  return (
+    <section className="container max-w-screen-xl min-h-screen p-8 mx-auto">
+      <ProjectFilter/>
+      <Projects data={props.projects} />
+    </section>
+  );
 };
 
-// export async function getStaticProps(context) {
-//   const { params } = context;
-//   const { category } = params;
-//   const filteredProjects = getFilteredProjects(category);
-//   return {
-//     props: {
-//       projects: filteredProjects,
-//     },
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const allProject = getProjectFiles();
-//   const slugs = allProject.map((project) => project.replace(/\.md$/, ""));
-//   const categories = [];
-//   slugs.map((slug) => {
-//     let { category } = getProjectData(slug);
-//     categories.push(category);
-//   });
-//   const unique = (value, index, self) => {
-//     return self.indexOf(value) === index;
-//   };
-//   const uniqueCats = categories.filter(unique);
-//   return {
-//     paths: uniqueCats.map((cat) => ({ params: { category: [cat] } })),
-//     fallback: false,
-//   };
-// }
+export async function getServerSideProps(context) {
+  const { params } = context;
+  const category = params.category;
+  const filteredProjects = getFilteredProjects(category[1]);
+  if (!category) {
+    return {
+      props: { hasError: true },
+      notFound: true,
+    };
+  }
+  return {
+    props: {
+      projects: filteredProjects,
+    },
+  };
+}
 
 export default FilteredProjectPage;

@@ -3,7 +3,7 @@ import styles from "./projects.module.css";
 
 const Projects = (props) => {
   return (
-    <ul>
+    <ul className="opacity-10">
       {props.data.map((item) => {
         const { id, title, excerpt, slug, image, tags } = item;
         return (

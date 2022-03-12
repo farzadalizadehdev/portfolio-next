@@ -4,14 +4,11 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { monokai } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import styles from "./projectDetail.module.css";
 import {
-  BriefcaseIcon,
   CalendarIcon,
   CodeIcon,
   DocumentIcon,
   GlobeAltIcon,
-  HandIcon,
   OfficeBuildingIcon,
-  PuzzleIcon,
   TemplateIcon,
   TerminalIcon,
   UserIcon,
