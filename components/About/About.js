@@ -40,7 +40,6 @@ const About = (props) => {
           className={`h-20 flex items-center justify-start ${styles.actionButtons}`}
         >
           <a
-            target="_blank"
             href={downloadCV}
             className="flex items-center justify-center px-4 py-2 text-sm text-white rounded-full bg-sky-900 hover:bg-sky-800"
           >
@@ -48,21 +47,18 @@ const About = (props) => {
             Download CV
           </a>
           <a
-            target="_blank"
             href={github}
             className="relative flex items-center justify-center w-8 h-8 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
           >
             <CodeIcon className="inline-block w-4 h-4" />
           </a>
           <a
-            target="_blank"
             href={`mailto:${email}`}
             className="flex items-center justify-center w-8 h-8 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
           >
             <MailIcon className="inline-block w-4 h-4" />
           </a>
           <a
-            target="_blank"
             href={`tel:${tel}`}
             className="flex items-center justify-center w-8 h-8 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
           >

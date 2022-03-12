@@ -6,20 +6,19 @@ import {
 import Custom404 from "../404";
 
 const ProjectDetailPage = (props) => {
-  if(!props.projectDetail) {
+  if(!props.slug) {
     return <Custom404/>
   }
-  return <ProjectDetail data={props.projectDetail} />;
+  return <ProjectDetail data={props.slug} />;
 };
 
 export async function getStaticProps(context) {
   const { params } = context;
   const { slug } = params;
   const projectDetail = getProjectData(slug);
-  
   return {
     props: {
-      projectDetail: projectDetail,
+      slug: projectDetail,
     },
   };
 }

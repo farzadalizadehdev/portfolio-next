@@ -19,7 +19,6 @@ const Contact = (props) => {
         </p>
         <div className={`h-full flex items-center justify-start flex-wrap `}>
           <a
-            target="_blank"
             href={github}
             className="relative flex items-center justify-center m-4 text-slate-800 "
           >
@@ -32,7 +31,6 @@ const Contact = (props) => {
             </div>
           </a>
           <a
-            target="_blank"
             href={`mailto:${email}`}
             className="flex items-center justify-center m-4 text-slate-800"
           >
@@ -43,7 +41,6 @@ const Contact = (props) => {
             </div>
           </a>
           <a
-            target="_blank"
             href={`tel:${tel}`}
             className="flex items-center justify-center m-4 text-slate-800"
           >

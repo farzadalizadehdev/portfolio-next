@@ -43,8 +43,7 @@ const ProjectDetail = (props) => {
           className="my-8 overflow-hidden rounded"
           style={monokai}
           language="javascript"
-          children={children}
-        />
+        >{children}</SyntaxHighlighter>
       );
     },
   };
@@ -101,7 +100,6 @@ const ProjectDetail = (props) => {
             {website && (
               <a
                 href={website.url}
-                target="_blank"
                 className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-sky-100 text-sky-800 hover:bg-sky-200 border-sky-200"
               >
                 <GlobeAltIcon className="w-5 h-5 mr-2" />
@@ -111,7 +109,6 @@ const ProjectDetail = (props) => {
             {design && (
               <a
                 href={design.url}
-                target="_blank"
                 className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-fuchsia-100 text-fuchsia-800 hover:bg-fuchsia-200 border-fuchsia-200"
               >
                 <TemplateIcon className="w-5 h-5 mr-2" />
@@ -121,7 +118,6 @@ const ProjectDetail = (props) => {
             {github && (
               <a
                 href={github.url}
-                target="_blank"
                 className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-slate-800 text-slate-100 hover:bg-slate-700 border-slate-700"
               >
                 <CodeIcon className="w-5 h-5 mr-2" />
