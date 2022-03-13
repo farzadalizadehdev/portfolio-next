@@ -1,38 +1,36 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
 
 const ProjectFilter = (props) => {
-  const [activeTab, setActiveTab] = useState("all");
   const router = useRouter();
-  const tab = router.query.category;
-  useEffect(() => {
-    setActiveTab(tab ? tab[1] : "all");
-  }, [tab]);
+  const initialActiveTab = router.query.category
+  const [activeTab, setActiveTab] = useState(initialActiveTab ? initialActiveTab[1] : 'all');
+  const handleTabChange = (e) => {
+    const tab = e.target.dataset.tab;
+    router.push(tab ? `/projects/search/${tab}` : `/projects`);
+    setActiveTab(tab ? tab : 'all')
+  };
   return (
-    <ul className="flex w-full px-4 mt-4 mb-8 text-sm justify-center md:justify-start items-center sticky top-16 bg-white z-20 h-12">
+    <ul className="sticky z-20 flex items-center justify-center w-full h-12 px-4 mt-4 mb-8 text-sm bg-white md:justify-start top-16">
       <li
+        onClick={handleTabChange}
         className={`cursor-pointer mx-4 font-light text-sky-900 hover:text-sky-800 border-b-sky-700 ${
           activeTab === "all" ? "border-b-2" : ""
         }`}
       >
-        <Link href={`/projects/`}>
-          ALL
-        </Link>
+        ALL
       </li>
       {props.filters.map((filter) => {
         return (
           <li
+            onClick={handleTabChange}
             key={filter}
             data-tab={filter}
             className={`cursor-pointer mx-4 font-light text-sky-900 hover:text-sky-800 border-b-sky-700 ${
               activeTab === filter ? "border-b-2" : ""
             }`}
           >
-            <Link href={`/projects/search/${filter}`}>
-              {filter && filter.toUpperCase()}
-            </Link>
+            {filter && filter.toUpperCase()}
           </li>
         );
       })}

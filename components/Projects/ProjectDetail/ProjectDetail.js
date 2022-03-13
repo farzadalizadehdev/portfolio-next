@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { monokai } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import styles from "./projectDetail.module.css";
+import { useRouter } from "next/router";
 import {
   CalendarIcon,
   CodeIcon,
@@ -15,12 +16,15 @@ import {
   UserIcon,
 } from "@heroicons/react/outline";
 import ProjectDetailItem from "./ProjectDetailItem/ProjectDetailItem";
-import Link from "next/link";
 
 const ProjectDetail = (props) => {
   const { title, excerpt, slug, image, content, slide, detail } = props.data;
   const { employer, name, dates, technology, responsibilities, links } = detail;
   const { website, design, github } = links;
+  const router = useRouter();
+  const handleBackLink = () => {
+    router.back();
+  };
   const renderers = {
     img(image) {
       return (
@@ -43,7 +47,9 @@ const ProjectDetail = (props) => {
           className="my-8 overflow-hidden rounded"
           style={monokai}
           language="javascript"
-        >{children}</SyntaxHighlighter>
+        >
+          {children}
+        </SyntaxHighlighter>
       );
     },
   };
@@ -65,9 +71,12 @@ const ProjectDetail = (props) => {
           >
             {content}
           </ReactMarkdown>
-          <div className="flex items-center hidden mb-8 md:flex text-sky-700 hover:text-sky-600">
+          <div
+            onClick={handleBackLink}
+            className="flex items-center hidden mb-8 cursor-pointer md:flex text-sky-700 hover:text-sky-600"
+          >
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
-            <Link href={`/projects`}>Back To Projects</Link>
+            <span>Back To Projects</span>
           </div>
         </div>
         <div className="sticky flex flex-col w-full h-auto m-0 mb-8 sm:flex-row lg:flex-col lg:ml-8 lg:basis-96 top-24">
@@ -125,9 +134,9 @@ const ProjectDetail = (props) => {
               </a>
             )}
           </div>
-          <div className="flex items-center justify-center m-4 md:hidden text-sky-700 hover:text-sky-600">
+          <div onClick={handleBackLink} className="flex items-center justify-center m-4 cursor-pointer md:hidden text-sky-700 hover:text-sky-600">
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
-            <Link href={`/projects`}>Back To Projects</Link>
+            <span>Back To Projects</span>
           </div>
         </div>
       </section>
