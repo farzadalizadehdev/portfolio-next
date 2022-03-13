@@ -5,13 +5,18 @@ import { MenuIcon, XIcon, DownloadIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
 const navItems = [
-  { name: "SKILLS", href: "#" },
-  { name: "WORKS", href: "#" },
-  { name: "SERVICES", href: "#" },
-  { name: "CLIENTS", href: "#" },
-  { name: "CONTACT", href: "#" },
+  { name: "SKILLS", href: "skills" },
+  { name: "SERVICES", href: "services" },
+  { name: "WORKS", href: "works" },
+  { name: "CLIENTS", href: "clients" },
+  { name: "CONTACT", href: "contact" },
 ];
 const Navigation = () => {
+  const handleScrollToSection = (e) => {
+    let elementId = e.target.dataset.id;
+    var element = document.querySelector(`#${elementId}`);
+    element && element.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
   return (
     <Popover className="relative h-full">
       <div className="w-full h-full px-4 mx-auto">
@@ -35,13 +40,14 @@ const Navigation = () => {
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             {navItems.map((item) => {
               return (
-                <a
+                <span
+                  data-id={item.href}
                   key={item.name}
-                  href={item.href}
-                  className="text-sm text-gray-500 hover:text-gray-900"
+                  onClick={handleScrollToSection}
+                  className="text-sm text-gray-500 cursor-pointer hover:text-gray-900"
                 >
                   {item.name}
-                </a>
+                </span>
               );
             })}
           </Popover.Group>
@@ -91,13 +97,14 @@ const Navigation = () => {
               <div className="flex flex-col">
                 {navItems.map((item) => {
                   return (
-                    <a
-                      key={item.name}
-                      href={item.href}
+                    <span
+                      data-id={item.href}
+                      key={`${item.name}MobileNav`}
+                      onClick={handleScrollToSection}
                       className="py-2 text-sm font-medium text-gray-900 hover:text-gray-700"
                     >
                       {item.name}
-                    </a>
+                    </span>
                   );
                 })}
               </div>

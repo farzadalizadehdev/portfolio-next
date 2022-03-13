@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/outline";
 
 const Works = (props) => {
   return (
-    <section className="h-auto py-12 lg:py-0 lg:h-screen bg-slate-50">
+    <section id="works" className="h-auto py-12 lg:py-0 lg:h-screen bg-slate-50">
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-2 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold text-sky-900`}>
           LATEST WORKS

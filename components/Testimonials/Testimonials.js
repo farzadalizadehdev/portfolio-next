@@ -9,7 +9,7 @@ const Testimonials = (props) => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <section className="h-auto py-12 bg-slate-100 md:h-screen md:py-0">
+    <section id="clients" className="h-auto py-12 bg-slate-100 md:h-screen md:py-0">
       <div className="container flex flex-col items-center justify-start h-full max-w-screen-lg px-6 py-0 mx-auto md:py-24">
         <p className={`text-4xl md:text-6xl font-bold text-sky-900`}>
           TESTIMONIALS
