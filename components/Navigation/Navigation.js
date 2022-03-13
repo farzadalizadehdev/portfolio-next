@@ -1,7 +1,14 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, DownloadIcon } from "@heroicons/react/outline";
+import {
+  MenuIcon,
+  XIcon,
+  DownloadIcon,
+  SunIcon,
+  MoonIcon,
+} from "@heroicons/react/outline";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const navItems = [
@@ -12,10 +19,14 @@ const navItems = [
   { name: "CONTACT", href: "contact" },
 ];
 const Navigation = () => {
+  const { theme, setTheme } = useTheme();
   const handleScrollToSection = (e) => {
     let elementId = e.target.dataset.id;
     var element = document.querySelector(`#${elementId}`);
     element && element.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
+  const handleChangeTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
     <Popover className="relative h-full">
@@ -44,21 +55,22 @@ const Navigation = () => {
                   data-id={item.href}
                   key={item.name}
                   onClick={handleScrollToSection}
-                  className="text-sm text-gray-500 cursor-pointer hover:text-gray-900"
+                  className="text-sm cursor-pointer dark:text-slate-200 text-slate-600 hover:text-slate-900"
                 >
                   {item.name}
                 </span>
               );
             })}
           </Popover.Group>
-          <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-sm border border-transparent rounded-full text-sky-800 hover:text-sky-700 bg-sky-50"
-            >
-              <DownloadIcon className="inline-block w-4 h-4 mr-1 align-sub" />
-              Download CV
-            </a>
+          <div
+            onClick={handleChangeTheme}
+            className="items-center justify-end hidden p-4 cursor-pointer md:flex md:flex-1 lg:w-0"
+          >
+            {theme === "dark" ? (
+              <SunIcon className="inline-block w-4 h-4 mr-1 align-sub" />
+            ) : (
+              <MoonIcon className="inline-block w-4 h-4 mr-1 align-sub" />
+            )}
           </div>
         </div>
       </div>

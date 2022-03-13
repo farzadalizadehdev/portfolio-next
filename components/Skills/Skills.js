@@ -17,11 +17,11 @@ const Skills = (props) => {
     },
   };
   return (
-    <section id="skills" className="h-auto py-12 md:h-screen md:py-0 bg-slate-50">
+    <section id="skills" className="h-auto py-12 md:h-screen md:py-0 text-slate-700 dark:text-slate-100 bg-slate-50 dark:bg-zinc-900">
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto">
-        <p className={`text-4xl md:text-6xl font-bold text-sky-900`}>SKILLS</p>
+        <p className={`text-4xl md:text-6xl font-bold`}>SKILLS</p>
         <p
-          className={`text-sm md:text-xl font-light py-4 text-sky-900/30 md:mb-12 mb-0`}
+          className={`text-sm md:text-xl font-light py-4 text-slate-400 md:mb-12 mb-0`}
         >
           I’m always in learning...
         </p>

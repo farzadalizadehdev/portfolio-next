@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 const Layout = (props) => {
   return (
     <>
-      <Header />
+      <Header/>
       {props.children}
       <Footer />
     </>

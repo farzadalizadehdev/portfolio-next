@@ -33,6 +33,15 @@
   background-color: #e7ffe6;
   color: rgb(22, 163, 74);
 }
+.dark .serviceItems > li:nth-child(3) {
+  background-color: #023a00;
+  color: rgb(173, 255, 203);
+}
+.dark .serviceItems > li:nth-child(2) {
+  background-color: #47002e;
+  color: rgb(223, 187, 255);
+
+}
 
 @media screen and (min-width: 640px) {
   .serviceItems {

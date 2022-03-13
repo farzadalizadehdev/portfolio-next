@@ -1,13 +1,9 @@
-import axios from "axios";
-import Link from "next/link";
-import { useState } from "react";
-import styles from "./contact.module.css";
 import { CodeIcon, MailIcon, PhoneIcon } from "@heroicons/react/outline";
 
 const Contact = (props) => {
   const { email, tel, github } = props.content;
   return (
-    <section id="contact" className="h-auto py-12 bg-slate-800 md:py-24">
+    <section id="contact" className="h-auto py-12 bg-zinc-900 md:py-24">
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold text-slate-50`}>
           CONTACT ME

@@ -11,7 +11,7 @@ const FilteredProjectPage = (props) => {
     return <Custom404 />;
   }
   return (
-    <section className="container max-w-screen-xl min-h-screen p-8 mx-auto">
+    <section className="w-full mx-auto dark:bg-zinc-900">
       <ProjectFilter filters={props.filters} />
       <Projects data={props.category} />
     </section>

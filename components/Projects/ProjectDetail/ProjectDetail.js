@@ -55,7 +55,7 @@ const ProjectDetail = (props) => {
   };
 
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-50 dark:bg-zinc-900">
       <figure
         style={{
           backgroundImage: `url(/images/projects/${slug}/${slide})`,
@@ -64,44 +64,44 @@ const ProjectDetail = (props) => {
       ></figure>
       <section className="container flex flex-col items-start w-screen max-w-screen-xl px-8 mx-auto -mt-24 bg-transparent lg:flex-row">
         <div className="flex flex-col w-full lg:basis-2/3">
-          <h1 className="mt-8 mb-12 text-3xl text-sky-900">{title}</h1>
+          <h1 className="mt-8 mb-12 text-3xl text-zinc-800">{title}</h1>
           <ReactMarkdown
-            className="text-lg font-light text-gray-900"
+            className="text-lg font-light text-gray-900 dark:text-slate-100"
             components={renderers}
           >
             {content}
           </ReactMarkdown>
           <div
             onClick={handleBackLink}
-            className="flex items-center hidden mb-8 cursor-pointer md:flex text-sky-700 hover:text-sky-600"
+            className="flex items-center hidden mb-8 cursor-pointer md:flex dark:text-slate-400 text-sky-700 hover:text-sky-600"
           >
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <span>Back To Projects</span>
           </div>
         </div>
         <div className="sticky flex flex-col w-full h-auto m-0 mb-8 sm:flex-row lg:flex-col lg:ml-8 lg:basis-96 top-24">
-          <div className="px-6 py-8 mb-4 bg-white border rounded border-slate-200">
-            <p className="mb-4 text-3xl text-sky-900">Project Detail</p>
+          <div className="px-6 py-8 mb-4 bg-white border rounded dark:bg-zinc-800 dark:border-zinc-700 border-slate-200">
+            <p className="mb-4 text-3xl text-zinc-700 dark:text-slate-200">Project Detail</p>
             <ul>
               <ProjectDetailItem
                 detail={name}
-                icon={<DocumentIcon className={styles.detailIcon} />}
+                icon={<DocumentIcon className={`${styles.detailIcon} text-zinc-400`} />}
               />
               <ProjectDetailItem
                 detail={dates}
-                icon={<CalendarIcon className={styles.detailIcon} />}
+                icon={<CalendarIcon className={`${styles.detailIcon} text-zinc-400`} />}
               />
               <ProjectDetailItem
                 detail={employer}
-                icon={<OfficeBuildingIcon className={styles.detailIcon} />}
+                icon={<OfficeBuildingIcon className={`${styles.detailIcon} text-zinc-400`} />}
               />
               <ProjectDetailItem
                 detail={responsibilities}
-                icon={<UserIcon className={styles.detailIcon} />}
+                icon={<UserIcon className={`${styles.detailIcon} text-zinc-400`} />}
               />
               <ProjectDetailItem
                 detail={technology}
-                icon={<TerminalIcon className={styles.detailIcon} />}
+                icon={<TerminalIcon className={`${styles.detailIcon} text-zinc-400`} />}
               />
             </ul>
           </div>
@@ -109,7 +109,7 @@ const ProjectDetail = (props) => {
             {website && (
               <a
                 href={website.url}
-                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-sky-100 text-sky-800 hover:bg-sky-200 border-sky-200"
+                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-sky-100 dark:bg-sky-900 text-sky-800 hover:bg-sky-200 border-sky-200 dark:border-sky-800 dark:text-sky-100"
               >
                 <GlobeAltIcon className="w-5 h-5 mr-2" />
                 {website.text}
@@ -118,7 +118,7 @@ const ProjectDetail = (props) => {
             {design && (
               <a
                 href={design.url}
-                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-fuchsia-100 text-fuchsia-800 hover:bg-fuchsia-200 border-fuchsia-200"
+                className="flex items-center justify-center w-full h-12 mb-4 border rounded cursor-pointer bg-fuchsia-100 dark:bg-fuchsia-900 text-fuchsia-800 hover:bg-fuchsia-200 border-fuchsia-200 dark:border-fuchsia-800 dark:text-fuchsia-100"
               >
                 <TemplateIcon className="w-5 h-5 mr-2" />
                 {design.text}
@@ -134,7 +134,7 @@ const ProjectDetail = (props) => {
               </a>
             )}
           </div>
-          <div onClick={handleBackLink} className="flex items-center justify-center m-4 cursor-pointer md:hidden text-sky-700 hover:text-sky-600">
+          <div onClick={handleBackLink} className="flex items-center justify-center m-4 cursor-pointer md:hidden text-sky-700 dark:text-sky-400 hover:text-sky-600">
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <span>Back To Projects</span>
           </div>

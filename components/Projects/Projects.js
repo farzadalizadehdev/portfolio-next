@@ -8,7 +8,7 @@ const Projects = (props) => {
     visible: { opacity: 1 },
   };
   return (
-    <ul>
+    <ul className="container max-w-screen-xl min-h-screen px-8 mx-auto">
       <motion.div initial="hidden" animate="visible" variants={variants}>
         {props.data.map((item) => {
           const { id, title, excerpt, slug, image, tags } = item;
@@ -18,7 +18,7 @@ const Projects = (props) => {
               style={{
                 backgroundImage: `url(/images/projects/${slug}/${image})`,
               }}
-              className={`${styles.project} relative inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 border hover:border-sky-800`}
+              className={`${styles.project} relative inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 dark:border-zinc-800 border`}
             >
               <Link href={`/projects/${slug}`}>
                 <div
@@ -32,7 +32,7 @@ const Projects = (props) => {
                         return (
                           <li
                             key={tag}
-                            className="px-3 py-1 mr-2 text-xs font-light rounded-full bg-slate-200"
+                            className="px-3 py-1 mr-2 text-xs font-light rounded-full bg-slate-200 dark:bg-zinc-800 dark:text-zinc-400"
                           >
                             {tag}
                           </li>
