@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from 'next/image'
 
 const navItems = [
   { name: "SKILLS", href: "skills" },
@@ -31,24 +32,20 @@ const Navigation = () => {
   return (
     <Popover className="relative h-full">
       <div className="w-full h-full px-4 mx-auto">
-        <div className="flex items-center justify-between h-full">
-          <div className="flex justify-start md:flex-1">
+        <div className="flex items-center justify-end h-full md:justify-between">
+          <div className="flex justify-start w-full md:w-1/6">
             <span className="sr-only">Workflow</span>
             <Link href={`/`}>
-              <img
+              <Image
                 className="w-auto h-8 sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
+                src="/tailwind.svg"
                 alt=""
+                width={50}
+                height={50}
               />
             </Link>
           </div>
-          <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span className="sr-only">Open menu</span>
-              <MenuIcon className="w-6 h-6" aria-hidden="true" />
-            </Popover.Button>
-          </div>
-          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+          <Popover.Group as="nav" className="justify-center hidden w-3/6 space-x-10 md:flex grow">
             {navItems.map((item) => {
               return (
                 <span
@@ -62,15 +59,20 @@ const Navigation = () => {
               );
             })}
           </Popover.Group>
-          <div
+          <div className="block p-4 text-right cursor-pointer md:w-1/6"
             onClick={handleChangeTheme}
-            className="items-center justify-end hidden p-4 cursor-pointer md:flex md:flex-1 lg:w-0"
           >
             {theme === "dark" ? (
               <SunIcon className="inline-block w-4 h-4 mr-1 align-sub" />
             ) : (
               <MoonIcon className="inline-block w-4 h-4 mr-1 align-sub" />
             )}
+          </div>
+          <div className="-my-2 -mr-2 md:hidden">
+            <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md dark:bg-zinc-800 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span className="sr-only">Open menu</span>
+              <MenuIcon className="w-6 h-6" aria-hidden="true" />
+            </Popover.Button>
           </div>
         </div>
       </div>
@@ -87,7 +89,7 @@ const Navigation = () => {
           focus
           className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
         >
-          <div className="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
+          <div className="bg-white divide-y-2 rounded-lg shadow-lg dark:bg-zinc-800 ring-1 ring-black ring-opacity-5 dark:divide-zinc-700 divide-gray-50">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -98,7 +100,7 @@ const Navigation = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md dark:bg-zinc-700 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
@@ -113,21 +115,12 @@ const Navigation = () => {
                       data-id={item.href}
                       key={`${item.name}MobileNav`}
                       onClick={handleScrollToSection}
-                      className="py-2 text-sm font-medium text-gray-900 hover:text-gray-700"
+                      className="py-2 text-sm font-medium text-gray-900 hover:text-gray-700 dark:text-gray-200"
                     >
                       {item.name}
                     </span>
                   );
                 })}
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-                >
-                  <DownloadIcon className="inline-block w-4 h-4 mr-1 align-sub" />
-                  Download CV
-                </a>
               </div>
             </div>
           </div>
