@@ -20,7 +20,7 @@ const Projects = (props) => {
               }}
               className={`${styles.project} relative inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 dark:border-zinc-800 border`}
             >
-              <Link href={`/projects/${slug}`}>
+              <Link href={`/projects/${slug}`} passHref>
                 <div
                   className={`cursor-pointer px-4 py-6 h-full w-full flex items-start flex-col justify-end ${styles.detail}`}
                 >

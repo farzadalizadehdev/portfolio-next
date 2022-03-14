@@ -73,7 +73,7 @@ const ProjectDetail = (props) => {
           </ReactMarkdown>
           <div
             onClick={handleBackLink}
-            className="flex items-center hidden mb-8 cursor-pointer md:flex dark:text-slate-400 text-sky-700 hover:text-sky-600"
+            className="items-center hidden mb-8 cursor-pointer md:flex dark:text-slate-400 text-sky-700 hover:text-sky-600"
           >
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <span>Back To Projects</span>

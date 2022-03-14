@@ -19,7 +19,7 @@ const Works = (props) => {
         <ul className={`w-full flex flex-wrap mb-12 px-4  ${styles.wrapper}`}>
           {props.data.map((work) => {
             return (
-              <Link key={work.slug} href={`/projects/${work.slug}`}>
+              <Link key={work.slug} href={`/projects/${work.slug}`} passHref>
                 <li
                   style={{
                     backgroundImage: `url(/images/projects/${work.slug}/${work.image})`,
@@ -38,7 +38,7 @@ const Works = (props) => {
           })}
         </ul>
         <div className="flex items-center dark:text-slate-100 text-sky-700 hover:text-sky-600">
-          <Link href={`/projects`}>See More Projects</Link>
+          <Link href={`/projects`} passHref>See More Projects</Link>
           <ArrowRightIcon className="inline-block w-4 h-4 ml-2" />
         </div>
       </div>

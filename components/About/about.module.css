@@ -6,24 +6,19 @@
 .aboutContent > p:nth-child(1) {
   font-size: 5rem;
   font-weight: bold;
-  /* color: #cbd5e1; */
 }
 .aboutContent > p:nth-child(2) {
   font-size: 2.5rem;
   font-weight: bold;
-  /* color: #0c4a6e; */
   margin-top: -1rem;
 }
-
 .aboutContent > p:nth-child(3) {
   font-size: 1.2rem;
   font-weight: lighter;
-  /* color: #64748b; */
 }
 .aboutContent > p:nth-child(4) {
   font-size: 1.2rem;
   font-weight: lighter;
-  /* color: #64748b; */
   display: flex;
 }
 @media screen and (min-width: 640px) {

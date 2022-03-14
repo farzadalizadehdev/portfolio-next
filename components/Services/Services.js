@@ -34,7 +34,7 @@ const Services = (props) => {
                 <p className="my-4 font-light cursor-default text-md grow">
                   {service.description}
                 </p>
-                <Link href={`/projects/search/${service.slug}`}>
+                <Link href={`/projects/search/${service.slug}`} passHref>
                   See Projects
                 </Link>
               </li>

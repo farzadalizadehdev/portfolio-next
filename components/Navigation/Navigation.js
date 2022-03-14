@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 
 const navItems = [
   { name: "SKILLS", href: "skills" },
@@ -35,17 +35,20 @@ const Navigation = () => {
         <div className="flex items-center justify-end h-full md:justify-between">
           <div className="flex justify-start w-full md:w-1/6">
             <span className="sr-only">Workflow</span>
-            <Link href={`/`}>
+            <Link href={`/`} passHref>
               <Image
                 className="w-auto h-8 sm:h-10"
-                src="/tailwind.svg"
+                src="/images/tailwind.svg"
                 alt=""
                 width={50}
                 height={50}
               />
             </Link>
           </div>
-          <Popover.Group as="nav" className="justify-center hidden w-3/6 space-x-10 md:flex grow">
+          <Popover.Group
+            as="nav"
+            className="justify-center hidden w-3/6 space-x-10 md:flex grow"
+          >
             {navItems.map((item) => {
               return (
                 <span
@@ -59,7 +62,8 @@ const Navigation = () => {
               );
             })}
           </Popover.Group>
-          <div className="block p-4 text-right cursor-pointer md:w-1/6"
+          <div
+            className="block p-4 text-right cursor-pointer md:w-1/6"
             onClick={handleChangeTheme}
           >
             {theme === "dark" ? (
@@ -93,10 +97,12 @@ const Navigation = () => {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="w-auto h-8"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                  <Image
+                    className="w-auto h-8 sm:h-10"
+                    src="/images/tailwind.svg"
+                    alt=""
+                    width={50}
+                    height={50}
                   />
                 </div>
                 <div className="-mr-2">

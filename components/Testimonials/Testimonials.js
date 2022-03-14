@@ -41,6 +41,7 @@ const Testimonials = (props) => {
                         width={50}
                         height={50}
                         src={`/images/person/${comment.image}`}
+                        alt={comment.title}
                       />
                       <div
                         className={`${styles.detail} hidden md:block px-3 text-left`}
@@ -67,13 +68,13 @@ const Testimonials = (props) => {
                     )}
                   >
                     <div className="flex self-start p-2">
-                      <Image src={`/images/quote.svg`} width={50} height={50} />
+                      <Image src={`/images/quote.svg`} width={50} height={50} alt="qoute" />
                     </div>
                     <p className="w-full p-4 text-lg italic">
                       {comment.comment}
                     </p>
                     <div className="flex self-end p-2 rotate-180">
-                      <Image src={`/images/quote.svg`} width={50} height={50} />
+                      <Image src={`/images/quote.svg`} width={50} height={50} alt="qoute" />
                     </div>
                   </Tab.Panel>
                 );
@@ -81,9 +82,9 @@ const Testimonials = (props) => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <div className="flex items-center hidden mt-12">
+        <div className="items-center hidden mt-12">
           <AnnotationIcon className="inline-block w-5 h-5 mr-2" />
-          <Link href={`#`}>Write Your Comment</Link>
+          <Link href={`#`} passHref>Write Your Comment</Link>
         </div>
       </div>
     </section>
