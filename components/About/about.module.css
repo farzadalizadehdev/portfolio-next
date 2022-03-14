@@ -1,7 +1,7 @@
 .aboutSection {
   height: calc(100vh - 64px);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .aboutContent > p:nth-child(1) {
   font-size: 5rem;

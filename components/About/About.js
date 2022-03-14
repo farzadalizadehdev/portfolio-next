@@ -29,10 +29,10 @@ const About = (props) => {
     <section
       className={`bg-auto bg-no-repeat bg-center bg-cover bg-fixed bg-[url('/images/about.jpg')] ${styles.aboutSection}`}
     >
-      <div className="absolute z-10 w-full h-full dark:bg-neutral-900/80"></div>
+      <div className="absolute z-10 w-full h-full bg-sky-100/90 dark:bg-neutral-900/90"></div>
       <div className="container z-20 flex flex-col justify-center h-full max-w-screen-lg px-4 mx-auto md:justify-start">
         <ReactMarkdown
-          className={`${styles.aboutContent} dark:text-white text-slate-700 flex flex-col justify-center`}
+          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-sky-300 to-sky-700 dark:from-sky-400 dark:to-sky-800 flex flex-col justify-center`}
           components={renderers}
         >
           {content}

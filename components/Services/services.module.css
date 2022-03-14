@@ -10,12 +10,12 @@
 }
 .serviceItems > li {
   margin: 0.75rem;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   padding: 1rem;
   width: 100%;
 }
 .dark .serviceItems > li {
-  border: 2px solid #444;
+  border: 1px solid #333;
 }
 .serviceItems > li:first-child {
   min-height: 420px;
