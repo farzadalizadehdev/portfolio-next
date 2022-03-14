@@ -7,7 +7,7 @@ const Services = (props) => {
   return (
     <section
       id="services"
-      className={`${styles.theme} h-auto py-12 dark:bg-zinc-900/50 text-slate-700 dark:text-slate-100 bg-slate-100 md:h-screen md:py-0rr`}
+      className={`${styles.theme} ${theme === 'dark' ? styles.dark : null } h-auto py-12 dark:bg-zinc-900/50 text-slate-700 dark:text-slate-100 bg-slate-100 md:h-screen md:py-0rr`}
     >
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-lg px-6 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold`}>SERVICES</p>
