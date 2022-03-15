@@ -64,7 +64,12 @@ const ProjectDetail = (props) => {
       ></figure>
       <section className="container flex flex-col items-start w-screen max-w-screen-xl px-8 mx-auto -mt-24 bg-transparent lg:flex-row">
         <div className="flex flex-col w-full lg:basis-2/3">
-          <h1 className="mt-8 mb-12 text-3xl text-zinc-800">{title}</h1>
+          <div>
+            <h1 className="mt-8 mb-12 text-3xl text-zinc-800">{title}</h1>
+            {/* <div>
+              <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
+            </div> */}
+          </div>
           <ReactMarkdown
             className="text-lg font-light text-gray-900 dark:text-slate-100"
             components={renderers}
@@ -81,27 +86,47 @@ const ProjectDetail = (props) => {
         </div>
         <div className="sticky flex flex-col w-full h-auto m-0 mb-8 sm:flex-row lg:flex-col lg:ml-8 lg:basis-96 top-24">
           <div className="px-6 py-8 mb-4 bg-white border rounded dark:bg-zinc-800 dark:border-zinc-700 border-slate-200">
-            <p className="mb-4 text-3xl text-zinc-700 dark:text-slate-200">Project Detail</p>
+            <p className="mb-4 text-3xl text-zinc-700 dark:text-slate-200">
+              Project Detail
+            </p>
             <ul>
               <ProjectDetailItem
                 detail={name}
-                icon={<DocumentIcon className={`${styles.detailIcon} text-zinc-400`} />}
+                icon={
+                  <DocumentIcon
+                    className={`${styles.detailIcon} text-zinc-400`}
+                  />
+                }
               />
               <ProjectDetailItem
                 detail={dates}
-                icon={<CalendarIcon className={`${styles.detailIcon} text-zinc-400`} />}
+                icon={
+                  <CalendarIcon
+                    className={`${styles.detailIcon} text-zinc-400`}
+                  />
+                }
               />
               <ProjectDetailItem
                 detail={employer}
-                icon={<OfficeBuildingIcon className={`${styles.detailIcon} text-zinc-400`} />}
+                icon={
+                  <OfficeBuildingIcon
+                    className={`${styles.detailIcon} text-zinc-400`}
+                  />
+                }
               />
               <ProjectDetailItem
                 detail={responsibilities}
-                icon={<UserIcon className={`${styles.detailIcon} text-zinc-400`} />}
+                icon={
+                  <UserIcon className={`${styles.detailIcon} text-zinc-400`} />
+                }
               />
               <ProjectDetailItem
                 detail={technology}
-                icon={<TerminalIcon className={`${styles.detailIcon} text-zinc-400`} />}
+                icon={
+                  <TerminalIcon
+                    className={`${styles.detailIcon} text-zinc-400`}
+                  />
+                }
               />
             </ul>
           </div>
@@ -134,7 +159,10 @@ const ProjectDetail = (props) => {
               </a>
             )}
           </div>
-          <div onClick={handleBackLink} className="flex items-center justify-center m-4 cursor-pointer md:hidden text-sky-700 dark:text-sky-400 hover:text-sky-600">
+          <div
+            onClick={handleBackLink}
+            className="flex items-center justify-center m-4 cursor-pointer md:hidden text-sky-700 dark:text-sky-400 hover:text-sky-600"
+          >
             <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             <span>Back To Projects</span>
           </div>

@@ -27,41 +27,41 @@ const About = (props) => {
   };
   return (
     <section
-      className={`bg-auto bg-no-repeat bg-center bg-cover bg-fixed bg-[url('/images/about.jpg')] ${styles.aboutSection}`}
+      className={`bg-no-repeat bg-center md:h-screen h-auto bg-cover bg-fixed bg-[url('/images/about-light.jpg')] dark:bg-[url('/images/about-dark.jpg')] ${styles.aboutSection}`}
     >
-      <div className="absolute z-10 w-full h-full bg-sky-100/90 dark:bg-neutral-900/90"></div>
-      <div className="container z-20 flex flex-col justify-center h-full max-w-screen-lg px-4 mx-auto md:justify-start">
+      <div className="absolute z-10 w-full h-full "></div>
+      <div className="container z-20 h-full max-w-screen-lg px-4 mx-auto">
         <ReactMarkdown
-          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-sky-300 to-sky-700 dark:from-sky-400 dark:to-sky-800 flex flex-col justify-center`}
+          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-slate-500 to-slate-800 dark:from-white dark:to-sky-200 flex flex-col items-center justify-center`}
           components={renderers}
         >
           {content}
         </ReactMarkdown>
         <div
-          className={`h-20 flex items-center justify-start ${styles.actionButtons}`}
+          className={`h-20 flex items-center justify-center ${styles.actionButtons}`}
         >
           <a
             href={downloadCV}
-            className="flex items-center justify-center px-4 py-3 text-sm text-white rounded-full dark:text-slate-800 bg-slate-700 dark:bg-slate-200 hover:bg-sky-800"
+            className="flex items-center justify-center px-4 py-3 text-sm text-white rounded-full dark:text-slate-800 bg-slate-800 dark:bg-slate-200 hover:bg-slate-600"
           >
             <DownloadIcon className="inline-block w-4 h-4 mr-1 align-sub" />
             Download CV
           </a>
           <a
             href={github}
-            className="relative flex items-center justify-center w-10 h-10 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
+            className="relative flex items-center justify-center w-10 h-10 ml-4 text-sm text-white rounded-full bg-slate-800 dark:bg-white dark:text-slate-800 dark:hover:bg-slate-200 hover:bg-slate-700 flexitems-center"
           >
             <CodeIcon className="inline-block w-4 h-4" />
           </a>
           <a
             href={`mailto:${email}`}
-            className="flex items-center justify-center w-10 h-10 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
+            className="flex items-center justify-center w-10 h-10 ml-4 text-sm text-white rounded-full bg-slate-800 dark:bg-white dark:text-slate-800 dark:hover:bg-slate-200 hover:bg-slate-700 flexitems-center"
           >
             <MailIcon className="inline-block w-4 h-4" />
           </a>
           <a
             href={`tel:${tel}`}
-            className="flex items-center justify-center w-10 h-10 ml-4 text-sm text-blue-900 bg-white rounded-full flexitems-center"
+            className="flex items-center justify-center w-10 h-10 ml-4 text-sm text-white rounded-full bg-slate-800 dark:bg-white dark:text-slate-800 dark:hover:bg-slate-200 hover:bg-slate-700 flexitems-center"
           >
             <PhoneIcon className="inline-block w-4 h-4" />
           </a>

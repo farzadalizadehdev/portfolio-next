@@ -1,7 +1,7 @@
 Hi,
 
-I’m Farzad.
+I’m Farzad Alizadeh.
 
-I’m a front-end developer with 
+I’m a front-end developer with
 
 UI/UX design skills from IRAN ![iran flag](iran.svg)

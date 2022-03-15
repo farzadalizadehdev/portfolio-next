@@ -67,9 +67,9 @@ const Navigation = () => {
             onClick={handleChangeTheme}
           >
             {theme === "dark" ? (
-              <SunIcon className="inline-block w-4 h-4 mr-1 align-sub" />
-            ) : (
               <MoonIcon className="inline-block w-4 h-4 mr-1 align-sub" />
+              ) : (
+              <SunIcon className="inline-block w-4 h-4 mr-1 align-sub" />
             )}
           </div>
           <div className="-my-2 -mr-2 md:hidden">

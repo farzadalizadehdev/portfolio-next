@@ -7,7 +7,7 @@ const Works = (props) => {
   return (
     <section
       id="works"
-      className="h-auto py-12 dark:bg-neutral-900 text-slate-700 dark:text-slate-100 lg:py-0 lg:h-screen bg-slate-50"
+      className="flex items-center justify-center min-h-screen py-12 dark:bg-neutral-900 text-slate-700 dark:text-slate-100 bg-slate-50"
     >
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-2 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold `}>LATEST WORKS</p>
