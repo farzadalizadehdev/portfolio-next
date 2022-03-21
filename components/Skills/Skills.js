@@ -17,7 +17,10 @@ const Skills = (props) => {
     },
   };
   return (
-    <section id="skills" className="h-auto py-12 md:h-screen md:py-0 text-slate-700 dark:text-slate-100 bg-slate-50 dark:bg-zinc-900">
+    <section
+      id="skills"
+      className="h-auto py-12 md:h-screen md:py-0 text-slate-700 dark:text-slate-100 bg-slate-50 dark:bg-zinc-900"
+    >
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-4 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold`}>SKILLS</p>
         <p

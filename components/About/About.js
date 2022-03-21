@@ -14,31 +14,32 @@ const About = (props) => {
   const renderers = {
     img(image) {
       return (
-        <Image
-          src={`/images/${image.src}`}
-          alt={image.alt}
-          priority
-          height={50}
-          width={50}
-          layout="fixed"
-        />
+        <div className="ml-2 align-middle">
+          <Image
+            src={`/images/${image.src}`}
+            alt={image.alt}
+            priority
+            height={45}
+            width={45}
+            layout="fixed"
+          />
+        </div>
       );
     },
   };
   return (
     <section
-      className={`bg-no-repeat bg-center md:h-screen h-auto bg-cover bg-fixed bg-[url('/images/about-light.jpg')] dark:bg-[url('/images/about-dark.jpg')] ${styles.aboutSection}`}
+      className={`bg-no-repeat bg-clip-content bg-left md:bg-center lg:bg-cover h-screen bg-fixed bg-[url('/images/about-light2.jpg')] dark:bg-[url('/images/about-dark1.jpg')] ${styles.aboutSection}`}
     >
-      <div className="absolute z-10 w-full h-full "></div>
       <div className="container z-20 h-full max-w-screen-lg px-4 mx-auto">
         <ReactMarkdown
-          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-slate-500 to-slate-800 dark:from-white dark:to-sky-200 flex flex-col items-center justify-center`}
+          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-purple-600 to-purple-900 dark:from-lime-300 dark:to-lime-500 flex flex-col items-center md:items-start justify-center`}
           components={renderers}
         >
           {content}
         </ReactMarkdown>
         <div
-          className={`h-20 flex items-center justify-center ${styles.actionButtons}`}
+          className={`h-20 flex items-center justify-center md:justify-start ${styles.actionButtons}`}
         >
           <a
             href={downloadCV}
