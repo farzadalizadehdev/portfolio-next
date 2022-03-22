@@ -7,8 +7,10 @@ import {
   MailIcon,
   PhoneIcon,
 } from "@heroicons/react/outline";
+import { useTheme } from "next-themes";
 
 const About = (props) => {
+  const { theme, setTheme } = useTheme();
   const { content } = props.content;
   const { tel, email, github, downloadCV } = props.contactInfo;
   const renderers = {
@@ -33,7 +35,7 @@ const About = (props) => {
     >
       <div className="container z-20 h-full max-w-screen-lg px-4 mx-auto">
         <ReactMarkdown
-          className={`${styles.aboutContent} bg-clip-text text-transparent bg-gradient-to-br from-purple-600 to-purple-900 dark:from-lime-300 dark:to-lime-500 flex flex-col items-center md:items-start justify-center`}
+          className={`${styles.aboutContent} ${theme === 'light' ? styles.light : styles.dark} flex flex-col items-center md:items-start justify-center`}
           components={renderers}
         >
           {content}

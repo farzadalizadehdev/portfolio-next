@@ -18,7 +18,7 @@ const Projects = (props) => {
               style={{
                 backgroundImage: `url(/images/projects/${slug}/${image})`,
               }}
-              className={`${styles.project} relative inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 dark:border-zinc-800 border`}
+              className={`${styles.project} relative inline-block bg-cover bg-no-repeat bg-center rounded-xl border-slate-200 dark:border-zinc-800 border`}
             >
               <Link href={`/projects/${slug}`} passHref>
                 <div

@@ -33,3 +33,32 @@
     font-size: 2rem;
   }
 }
+
+.aboutContent.dark > p {
+  background: linear-gradient(60deg, #80ff59, #00ee34, #23a6d5, #7d6eb3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutContent.light > p {
+  background: linear-gradient(60deg, #22b9a8, #006459, #e705bf, #471c6b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

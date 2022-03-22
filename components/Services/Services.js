@@ -14,7 +14,7 @@ const Services = (props) => {
       <div className="container flex flex-col items-center justify-center h-full max-w-screen-xl px-6 mx-auto">
         <p className={`text-4xl md:text-6xl font-bold`}>SERVICES</p>
         <p
-          className={`text-sm md:text-xl font-light text-slate-400 py-4 md:mb-12 mb-0`}
+          className={`text-sm md:text-xl font-light text-slate-500 py-4 md:mb-12 mb-0`}
         >
           I’m always in learning...
         </p>
