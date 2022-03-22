@@ -65,7 +65,7 @@ const ProjectDetail = (props) => {
       <section className="container flex flex-col items-start w-screen max-w-screen-xl px-8 mx-auto -mt-24 bg-transparent lg:flex-row">
         <div className="flex flex-col w-full lg:basis-2/3">
           <div>
-            <h1 className="mt-8 mb-12 text-3xl text-zinc-800">{title}</h1>
+            <h1 className="mt-8 mb-12 text-3xl text-white">{title}</h1>
             {/* <div>
               <ArrowLeftIcon className="inline-block w-4 h-4 mr-2" />
             </div> */}

@@ -4,7 +4,7 @@ import { getAllProjects } from "../../utils/getProjectsFromMarkdown";
 
 const ProjectsPage = (props) => {
   return (
-    <section className="w-full mx-auto dark:bg-gradient-to-t dark:from-purple-600 dark:to-purple-900">
+    <section className="w-full mx-auto dark:bg-zinc-900">
       <ProjectFilter filters={props.filters} />
       <Projects data={props.projects} />
     </section>
