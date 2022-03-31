@@ -1,5 +1,5 @@
-import ProjectFilter from "../../components/Projects/ProjectFilter/ProjectFilter.js";
-import Projects from "../../components/Projects/Projects.js";
+import ProjectFilter from "../../components/Projects/ProjectFilter/ProjectFilter";
+import Projects from "../../components/Projects/Projects";
 import Custom404 from "../404";
 import {
   getFilteredProjects,
