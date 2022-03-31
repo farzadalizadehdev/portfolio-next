@@ -1,10 +1,10 @@
 import Head from "next/head";
-import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
-import Services from "../components/Services/Services";
-import Skills from "../components/Skills/Skills";
-import Testimonials from "../components/Testimonials/Testimonials";
-import Works from "../components/Works/Works";
+import About from "../components/About/About.js";
+import Contact from "../components/Contact/Contact.js";
+import Services from "../components/Services/Services.js";
+import Skills from "../components/Skills/Skills.js";
+import Testimonials from "../components/Testimonials/Testimonials.js";
+import Works from "../components/Works/Works.js";
 import { getContentFromMarkdown } from "../utils/getContentFromMarkdown";
 import { getAllServices } from "../utils/getServicesFromMarkdown";
 import { getFeaturedProjects } from "../utils/getProjectsFromMarkdown";

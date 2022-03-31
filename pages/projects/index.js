@@ -1,5 +1,5 @@
-import ProjectFilter from "../../components/Projects/ProjectFilter/ProjectFilter";
-import Projects from "../../components/Projects/Projects";
+import ProjectFilter from "../../components/Projects/ProjectFilter/ProjectFilter.js";
+import Projects from "../../components/Projects/Projects.js";
 import { getAllProjects } from "../../utils/getProjectsFromMarkdown";
 
 const ProjectsPage = (props) => {

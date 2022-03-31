@@ -1,4 +1,4 @@
-import ProjectDetail from "../../components/Projects/ProjectDetail/ProjectDetail";
+import ProjectDetail from "../../components/Projects/ProjectDetail/ProjectDetail.js";
 import {
   getProjectFiles,
   getProjectData,
