@@ -4,4 +4,4 @@ I’m Farzad.
 
 I’m a front-end developer with
 
-UI/UX design skills from IRAN ![iran flag](iran.svg)
+UI/UX design skills.
