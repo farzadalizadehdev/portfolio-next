@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import Layout from "../components/Layout/Layout";
-import "../dist/output.css";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
