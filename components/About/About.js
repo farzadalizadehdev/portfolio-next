@@ -31,7 +31,7 @@ const About = (props) => {
   };
   return (
     <section
-      className={`bg-no-repeat bg-clip-content bg-left md:bg-center lg:bg-cover h-screen bg-fixed bg-[url('/images/about-light2.jpg')] dark:bg-[url('/images/about-dark1.jpg')] ${styles.aboutSection}`}
+      className={`bg-no-repeat bg-clip-content bg-left md:bg-center lg:bg-cover min-h-screen bg-fixed bg-[url('/images/about-light2.jpg')] dark:bg-[url('/images/about-dark1.jpg')] ${styles.aboutSection}`}
     >
       <div className="container z-20 h-full max-w-screen-lg px-4 mx-auto">
         <ReactMarkdown

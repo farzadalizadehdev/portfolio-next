@@ -4,7 +4,6 @@ import { Popover, Transition } from "@headlessui/react";
 import {
   MenuIcon,
   XIcon,
-  DownloadIcon,
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/outline";
