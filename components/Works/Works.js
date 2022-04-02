@@ -27,8 +27,8 @@ const Works = (props) => {
                   className={`cursor-pointer inline-block relative bg-cover bg-no-repeat bg-center rounded-xl border-zinc-200 dark:border-zinc-800 border hover:border-slate-800 ${styles.work}`}
                 >
                   <div className={`p-4 ${styles.detail}`}>
-                    <h1 className=" text-slate-100">{work.title}</h1>
-                    <p className="text-xs font-light text-slate-200">
+                    <h1 className=" text-zinc-800">{work.title}</h1>
+                    <p className="text-xs font-light text-zinc-600">
                       {work.excerpt}
                     </p>
                   </div>

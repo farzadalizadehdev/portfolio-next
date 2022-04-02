@@ -33,7 +33,7 @@ const ProjectDetail = (props) => {
             src={`/images/projects/${slug}/${image.src}`}
             alt={image.alt}
             priority
-            height={100}
+            height={135}
             width={200}
             layout="responsive"
           />
